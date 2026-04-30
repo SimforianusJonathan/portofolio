@@ -1,82 +1,79 @@
-'use client';
-
 import { portfolioData } from '@/lib/portfolio-data';
-import { Mail, Github, Linkedin, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin, Phone } from 'lucide-react';
+import Reveal from './reveal';
+import SectionHeading from './section-heading';
 
-const ContactSection = () => {
+const contactItems = [
+  {
+    label: 'Email',
+    value: portfolioData.email,
+    href: `mailto:${portfolioData.email}`,
+    icon: Mail,
+  },
+  {
+    label: 'Phone',
+    value: portfolioData.phone,
+    href: `tel:${portfolioData.phone.replaceAll(' ', '')}`,
+    icon: Phone,
+  },
+  {
+    label: 'GitHub',
+    value: 'SimforianusJonathan',
+    href: portfolioData.github,
+    icon: Github,
+  },
+  {
+    label: 'LinkedIn',
+    value: 'simforianus-jonathan-flonas-harefa',
+    href: portfolioData.linkedin,
+    icon: Linkedin,
+  },
+];
+
+export default function ContactSection() {
   return (
-    <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto">
-        {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            Get In Touch
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Interested in collaborating or have a question? I'd love to hear from you. Reach out through any of the channels below.
-          </p>
+    <section id="contact" className="section-band px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading
+          eyebrow="Contact"
+          title="Let us connect around engineering, research, or internship opportunities."
+          description="The contact details match the CV header so the web portfolio and resume stay consistent."
+          align="center"
+        />
+
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {contactItems.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <Reveal key={item.label} delay={index * 70}>
+                <a
+                  href={item.href}
+                  target={item.href.startsWith('http') ? '_blank' : undefined}
+                  rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                  className="group block h-full rounded-2xl border border-border bg-card p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:border-primary"
+                >
+                  <div className="mx-auto mb-5 grid h-12 w-12 place-items-center rounded-xl bg-background text-primary transition-colors group-hover:bg-primary group-hover:text-primary-foreground">
+                    <Icon size={22} />
+                  </div>
+                  <h3 className="font-bold text-foreground">{item.label}</h3>
+                  <p className="mt-2 break-words text-sm leading-6 text-muted-foreground group-hover:text-foreground">
+                    {item.value}
+                  </p>
+                </a>
+              </Reveal>
+            );
+          })}
         </div>
 
-        {/* Contact Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          {/* Email */}
-          <a
-            href={`mailto:${portfolioData.email}`}
-            className="group bg-card border border-border rounded-lg p-8 hover:border-primary transition-all duration-300 text-center"
-          >
-            <div className="flex justify-center mb-4">
-              <Mail className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
-            </div>
-            <h3 className="font-semibold text-foreground mb-2">Email</h3>
-            <p className="text-muted-foreground text-sm break-all hover:text-primary transition-colors">
-              {portfolioData.email}
+        <Reveal delay={220}>
+          <div className="mt-8 flex items-center justify-center gap-3 rounded-2xl border border-border bg-card p-6 text-center">
+            <MapPin className="shrink-0 text-primary" size={20} />
+            <p className="text-sm font-semibold text-foreground">
+              {portfolioData.name} - {portfolioData.location}
             </p>
-          </a>
-
-          {/* GitHub */}
-          <a
-            href={portfolioData.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-card border border-border rounded-lg p-8 hover:border-primary transition-all duration-300 text-center"
-          >
-            <div className="flex justify-center mb-4">
-              <Github className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
-            </div>
-            <h3 className="font-semibold text-foreground mb-2">GitHub</h3>
-            <p className="text-muted-foreground text-sm hover:text-primary transition-colors">
-              View my repositories
-            </p>
-          </a>
-
-          {/* LinkedIn */}
-          <a
-            href={portfolioData.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-card border border-border rounded-lg p-8 hover:border-primary transition-all duration-300 text-center"
-          >
-            <div className="flex justify-center mb-4">
-              <Linkedin className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
-            </div>
-            <h3 className="font-semibold text-foreground mb-2">LinkedIn</h3>
-            <p className="text-muted-foreground text-sm hover:text-primary transition-colors">
-              Connect with me
-            </p>
-          </a>
-        </div>
-
-        {/* Location */}
-        <div className="bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 border border-primary/30 rounded-lg p-8 flex items-center justify-center gap-3">
-          <MapPin className="w-5 h-5 text-primary flex-shrink-0" />
-          <div>
-            <p className="text-foreground font-semibold">{portfolioData.name}</p>
-            <p className="text-muted-foreground">{portfolioData.location}</p>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );
-};
-
-export default ContactSection;
+}

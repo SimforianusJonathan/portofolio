@@ -1,191 +1,386 @@
 export const portfolioData = {
-  name: "Universitas Indonesia Student",
-  title: "CS Student | AI & Blockchain Enthusiast",
+  name: "Simforianus Jonathan Flonas Harefa",
+  initials: "SJ",
+  title: "Computer Science Student | Data, AI, Web3 & Software Engineering",
   location: "Depok, Indonesia",
-  email: "your.email@example.com",
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
-
-  about: "I'm an undergraduate computer science student at Universitas Indonesia driven by curiosity in artificial intelligence, deep learning, and blockchain technologies. Through academic projects and competitions, I've developed hands-on experience across full-stack development, DevOps, and emerging technologies. I'm passionate about research, problem-solving, and building impactful solutions at the intersection of intelligent systems and decentralized technology. Quick learner with strong adaptability in exploring new technical domains.",
-
-  currentFocus: [
-    "Artificial Intelligence",
-    "Deep Learning",
-    "Machine Learning",
-    "Blockchain / Web3",
-    "Applied Software Engineering for intelligent systems"
+  phone: "+62 877-8830-9023",
+  email: "jonathanharefa9@gmail.com",
+  github: "https://github.com/SimforianusJonathan",
+  linkedin: "https://www.linkedin.com/in/simforianus-jonathan-flonas-harefa-1a9864266/",
+  summary:
+    "Undergraduate Computer Science student at Universitas Indonesia with hands-on experience across data science, machine learning, information retrieval, reinforcement learning, full-stack development, DevOps, mobile development, and blockchain systems. I have built academic, competition, and team-based projects using Django, Spring Boot, Next.js, Flutter, React, Python, Kubernetes, and Solidity.",
+  availability: "Open to internships, research, and software engineering opportunities",
+  quickFacts: [
+    { value: "3.72", label: "cGPA / 4.00" },
+    { value: "11+", label: "Academic & competition projects" },
+    { value: "3", label: "Teaching & research roles" },
+    { value: "590", label: "TOEFL Prediction score" },
   ],
-
+  focus: [
+    {
+      title: "Data Science & Analytics",
+      description:
+        "Turning structured and unstructured data into useful analysis, evaluation workflows, and decision support.",
+    },
+    {
+      title: "Machine Learning & Reinforcement Learning",
+      description:
+        "Exploring supervised learning, deep learning, Markov Decision Processes, and value-based planning methods.",
+    },
+    {
+      title: "Information Retrieval",
+      description:
+        "Building search systems with indexing, compression, ranking, adaptive retrieval, and evaluation pipelines.",
+    },
+    {
+      title: "Full-Stack Engineering",
+      description:
+        "Shipping web and mobile systems with practical backend, frontend, database, and deployment workflows.",
+    },
+    {
+      title: "Blockchain & Web3",
+      description:
+        "Designing smart-contract-based payment, escrow, crowdfunding, and verification flows.",
+    },
+  ],
   skills: {
-    "AI & Machine Learning": [
-      "PyTorch",
-      "TensorFlow",
-      "Hugging Face",
-      "LangChain",
-      "Computer Vision",
-      "NLP"
+    "Data, ML & IR": [
+      "Python",
+      "NumPy",
+      "Pandas",
+      "Scikit-learn",
+      "Seaborn",
+      "Jupyter Notebook",
+      "SQL",
+      "BM25",
+      "FAISS",
+      "PyTerrier",
+    ],
+    "Backend & APIs": [
+      "Java",
+      "Spring Boot",
+      "Django",
+      "Django REST Framework",
+      "Node.js",
+      "REST API",
+      "JWT Authentication",
+      "PostgreSQL",
+      "SQLite3",
+    ],
+    "Frontend & Mobile": [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "TanStack Start",
+      "Vite",
+      "Tailwind CSS",
+      "Flutter",
+      "Django Templates",
+    ],
+    "Cloud, DevOps & Tools": [
+      "Git",
+      "Docker",
+      "Kubernetes",
+      "Minikube",
+      "Helm",
+      "Vercel",
+      "Neon",
+      "Supabase",
+      "AWS VM",
+      "Prometheus",
     ],
     "Blockchain & Web3": [
       "Solidity",
-      "Ethereum",
       "Smart Contracts",
-      "DeFi",
-      "Web3.py",
-      "Hardhat"
+      "EVM",
+      "PolkaVM",
+      "Rust",
+      "ethers.js",
+      "wagmi",
+      "WalletConnect",
+      "Xellar Wallet",
     ],
-    "Software Engineering": [
-      "Python",
-      "JavaScript/TypeScript",
-      "React",
-      "Node.js",
-      "FastAPI",
-      "PostgreSQL"
-    ],
-    "Dev Tools": [
-      "Git",
-      "Docker",
-      "AWS",
-      "VS Code",
-      "Jupyter",
-      "Linux"
-    ]
   },
-
   projects: [
     {
-      title: "AI-Powered News Summarizer",
-      description: "Built a web app that summarizes news articles using GPT-4 and LangChain. Features semantic search, multi-source aggregation, and custom summaries.",
-      tags: ["Python", "LangChain", "OpenAI", "React", "FastAPI"],
-      category: "AI",
-      link: "https://github.com"
+      title: "NusaWallet",
+      subtitle: "AI-Powered Multi-Currency Wallet for Cross-Border Transactions",
+      period: "Apr 2026 - Present",
+      context: "Digdaya Competition",
+      category: "Product",
+      stack: ["React", "TypeScript", "TanStack Start", "Vite", "Tailwind CSS", "Supabase"],
+      links: [
+        {
+          label: "Figma",
+          href: "https://www.figma.com/design/pSmvnppCuS8nd3pxg6xwyj/Layermate--Copy-?node-id=0-1&t=AVU3SV71zc4jLCdy-1",
+        },
+        { label: "GitHub", href: "https://github.com/nusawallet/nusawallet-ai" },
+      ],
+      bullets: [
+        "Contributed to an AI-powered multi-currency wallet prototype for cross-border transactions by freelancers and SMEs.",
+        "Helped design multi-currency wallet management, payment simulation, currency conversion, AI-based FX recommendation, and fraud-aware transaction flows.",
+        "Advanced as a Stage 1 Top 800 idea out of 2000+ applicants in the ongoing Digdaya competition.",
+      ],
     },
     {
-      title: "DeFi Yield Optimizer",
-      description: "Smart contract suite for optimizing yield farming strategies across multiple protocols. Includes automated rebalancing and risk analysis.",
-      tags: ["Solidity", "DeFi", "Ethereum", "Hardhat"],
-      category: "Blockchain",
-      link: "https://github.com"
+      title: "Python Search Engine",
+      subtitle: "Information Retrieval System",
+      period: "Mar 2026",
+      context: "Universitas Indonesia",
+      category: "Data/IR",
+      stack: ["Python", "BM25", "SPIMI", "FAISS", "PyTerrier", "Tkinter"],
+      links: [{ label: "GitHub", href: "https://github.com/SimforianusJonathan/TP2" }],
+      bullets: [
+        "Built an end-to-end search engine supporting indexing, retrieval, experimentation, and evaluation.",
+        "Implemented BM25 ranking, WAND top-k retrieval, BSBI and SPIMI indexing, postings compression, Trie, and FST lexicon structures.",
+        "Added LSI with optional FAISS indexing, adaptive retrieval with PyTerrier, and a desktop UI for experimentation workflows.",
+      ],
     },
     {
-      title: "Computer Vision Model Zoo",
-      description: "Comprehensive library of pre-trained computer vision models for object detection, segmentation, and pose estimation with easy inference APIs.",
-      tags: ["PyTorch", "Computer Vision", "OpenCV", "Python"],
-      category: "AI",
-      link: "https://github.com"
+      title: "AgentVeil",
+      subtitle: "Trustless Payment and Verification System for AI Agents",
+      period: "Mar 2026",
+      context: "Web3 Competition",
+      category: "Web3",
+      stack: ["Python", "Solidity", "Rust", "PolkaVM", "EVM", "Smart Contracts"],
+      links: [
+        { label: "GitHub", href: "https://github.com/RelAthalla/AgentVeil" },
+        { label: "Live Demo", href: "https://agent-veil-one.vercel.app/" },
+      ],
+      bullets: [
+        "Developed a blockchain-based escrow and verification system for trustless transactions between autonomous AI agents.",
+        "Implemented Python agents for transaction intent generation, fulfillment, and refund flows connected to Solidity smart contracts.",
+        "Extended the architecture with a Rust-based PolkaVM verifier for advanced verification logic and future zero-knowledge proof integration.",
+      ],
     },
     {
-      title: "Decentralized Task Marketplace",
-      description: "Web3 platform connecting task creators with solvers. Built with Next.js, Solidity, and integrates IPFS for data storage.",
-      tags: ["Solidity", "Next.js", "Web3", "IPFS"],
-      category: "Blockchain",
-      link: "https://github.com"
+      title: "CARLOK",
+      subtitle: "Campus Room Discovery and Booking System",
+      period: "Jan 2026 - Present",
+      context: "Universitas Indonesia",
+      category: "Full-Stack",
+      stack: ["Django REST Framework", "Next.js", "PostgreSQL", "Kubernetes", "Helm"],
+      links: [
+        { label: "Live Demo", href: "https://carlok.ppl.cs.ui.ac.id/" },
+        { label: "GitLab", href: "https://gitlab.com" },
+      ],
+      bullets: [
+        "Developed admin-side features for managing campus room data, categories, facilities, and related metadata.",
+        "Contributed to backend integration for administrative workflows using Django REST Framework.",
+        "Deployed the application to a faculty-managed Kubernetes cluster using Helm for release and rollout management.",
+      ],
     },
     {
-      title: "Neural Network Visualizer",
-      description: "Interactive tool for visualizing neural network architectures and training processes. Supports custom models and real-time visualization.",
-      tags: ["React", "Three.js", "D3.js", "PyTorch"],
-      category: "AI",
-      link: "https://github.com"
+      title: "SiRuang",
+      subtitle: "Room Borrowing System for Faculty Facilities",
+      period: "Jan 2026 - Present",
+      context: "Universitas Indonesia",
+      category: "Full-Stack",
+      stack: ["Django REST Framework", "Next.js", "PostgreSQL", "Docker", "Kubernetes", "Helm"],
+      links: [
+        { label: "Live Demo", href: "https://siruang.ppl.cs.ui.ac.id/" },
+        { label: "GitLab", href: "https://gitlab.com" },
+      ],
+      bullets: [
+        "Built a room borrowing system for Fasilkom UI users, non-Fasilkom UI users, and external UI parties.",
+        "Developed backend and frontend workflows with Django REST Framework, Next.js, and PostgreSQL.",
+        "Used Docker, Kubernetes, and Helm to support development, deployment, and rollout processes.",
+      ],
     },
     {
-      title: "Crypto Portfolio Tracker",
-      description: "Full-stack application for tracking cryptocurrency portfolios with real-time price updates, analytics, and tax reporting features.",
-      tags: ["React", "Node.js", "MongoDB", "Web3.js"],
-      category: "Blockchain",
-      link: "https://github.com"
-    }
+      title: "Vacuum Cleaning Robot MDP",
+      subtitle: "Reinforcement Learning and Markov Decision Process Project",
+      period: "Jan 2026 - Present",
+      context: "Universitas Indonesia",
+      category: "Research",
+      stack: ["Reinforcement Learning", "MDP", "Value Iteration", "Policy Iteration", "Q-Learning"],
+      links: [{ label: "GitHub", href: "https://github.com/RelAthalla/mrl26/tree/p1edp-2306217430" }],
+      bullets: [
+        "Modeled an autonomous vacuum-cleaning robot as an MDP with states covering position, battery, dock, obstacles, and dirt levels.",
+        "Designed scaled-down and scaled-mid variants to balance realism and computational tractability.",
+        "Evaluated Value Iteration, Policy Iteration, Q-Learning, and exhaustive policy search on the proposed environments.",
+      ],
+    },
+    {
+      title: "ReWear+",
+      subtitle: "Sustainable Preloved Fashion Platform with Integrated Donation System",
+      period: "Jan 2026 - Feb 2026",
+      context: "BPC Competition",
+      category: "Product",
+      stack: ["Business Plan", "Product Strategy", "UI/UX Prototype", "Sustainability Innovation"],
+      links: [
+        { label: "Live Demo", href: "https://rewearplus.vercel.app/" },
+        { label: "GitHub", href: "https://github.com/SimforianusJonathan/rewear_plus" },
+      ],
+      bullets: [
+        "Designed a preloved fashion platform with integrated donation-based social impact features.",
+        "Proposed product flows for transaction donation, clothing donation distribution, and resale of donated items.",
+        "Presented the solution in a national business plan competition and earned Silver Medal in the fashion division.",
+      ],
+    },
+    {
+      title: "FLEC",
+      subtitle: "Blockchain-Based Freelancer Payment System",
+      period: "Jan 2026",
+      context: "Web3 Competition",
+      category: "Web3",
+      stack: ["React", "Next.js", "ethers.js", "Solidity", "WalletConnect"],
+      links: [
+        { label: "Live Demo", href: "https://flec-frontend-o5a7.vercel.app/" },
+        { label: "GitHub", href: "https://github.com/Flec-labs" },
+      ],
+      bullets: [
+        "Built a decentralized payment agreement system for freelance collaborations using smart contracts.",
+        "Implemented escrow-based payment rules to reduce non-payment risk and stalled transactions.",
+        "Integrated wallet connection and transaction handling for client-freelancer payment flows.",
+      ],
+    },
+    {
+      title: "Creatifi",
+      subtitle: "Web3 Milestone-Based Crowdfunding Platform",
+      period: "Oct 2025",
+      context: "Top 15 Hackathon BI-OJK",
+      category: "Web3",
+      stack: ["React", "Next.js", "ethers.js", "WalletConnect", "Solidity"],
+      links: [
+        { label: "Live Demo", href: "https://creatifi.vercel.app/" },
+        { label: "GitHub", href: "https://github.com/creatifi-labs" },
+      ],
+      bullets: [
+        "Developed a decentralized crowdfunding platform with milestone-based funding release for freelancer projects.",
+        "Integrated smart contracts for escrow handling, milestone validation, and secure payout flows.",
+        "Implemented wallet authentication and frontend-smart contract interaction using ABI-based calls.",
+      ],
+    },
+    {
+      title: "EventSphere",
+      subtitle: "Event Ticket Booking Platform",
+      period: "Feb 2025 - Jul 2025",
+      context: "Universitas Indonesia",
+      category: "Backend",
+      stack: ["Java Spring Boot", "PostgreSQL", "Thymeleaf", "AWS VM", "Microservices"],
+      links: [
+        { label: "GitHub Organization", href: "https://github.com/Adpro-B11" },
+        { label: "Payment Service", href: "https://github.com/Adpro-B11/event-sphere-payment/tree/fix_develop" },
+      ],
+      bullets: [
+        "Contributed to a microservices-based event ticket booking platform.",
+        "Developed the payment service, including inter-service API communication and payment request flows.",
+        "Supported deployment of the application in an AWS virtual machine environment.",
+      ],
+    },
+    {
+      title: "Bandung Couture",
+      subtitle: "Fashion Directory Website and Mobile App",
+      period: "Sept 2024 - Dec 2024",
+      context: "Universitas Indonesia",
+      category: "Mobile/Web",
+      stack: ["Django REST Framework", "Flutter", "Django Templates", "PostgreSQL"],
+      links: [
+        { label: "GitHub Mobile", href: "https://github.com/PBPgasal24-E01/bandung-couture-mobile" },
+        { label: "GitHub Web", href: "https://github.com/PBPgasal24-E01/bandung-couture" },
+      ],
+      bullets: [
+        "Developed a website and mobile app for discovering fashion outlets and stores in the Bandung area.",
+        "Built RESTful APIs using Django REST Framework for backend integration with the Flutter mobile application.",
+        "Developed the mobile interface in Flutter and the web application using Django built-in templates.",
+      ],
+    },
   ],
-
+  experience: [
+    {
+      organization: "Faculty of Computer Science, Universitas Indonesia",
+      role: "Research Assistant - Reinforcement Learning",
+      period: "Apr 2026 - Present",
+      location: "Depok, Indonesia",
+      bullets: [
+        "Conducted research on Markov Decision Process modeling by analyzing selected environments from a lecturer-provided environment list.",
+        "Formulated descriptive MDP representations and supported paper analysis on Policy Iteration and Value Iteration under average reward criteria.",
+      ],
+    },
+    {
+      organization: "Faculty of Computer Science, Universitas Indonesia",
+      role: "Teaching Assistant - Numerical Analysis",
+      period: "Jan 2026 - Present",
+      location: "Depok, Indonesia",
+      bullets: [
+        "Assisted course instruction and supported students in understanding core numerical analysis topics.",
+        "Helped facilitate discussions, assignments, and course-related evaluations.",
+      ],
+    },
+    {
+      organization: "Faculty of Computer Science, Universitas Indonesia",
+      role: "Teaching Assistant - Automata Theory, Languages, and Computation",
+      period: "Jan 2026 - Present",
+      location: "Depok, Indonesia",
+      bullets: [
+        "Supported teaching and learning activities for automata theory, formal languages, and computation topics.",
+        "Assisted students through discussions, exercises, and course administration tasks.",
+      ],
+    },
+  ],
   education: [
     {
       school: "Universitas Indonesia",
-      degree: "Bachelor of Science in Computer Science",
-      field: "Computer Science",
-      expected: "2027",
-      gpa: "3.72/4.0",
+      degree: "B.Sc. Computer Science",
+      period: "2023 - 2027",
       location: "Depok, Indonesia",
+      gpa: "3.72/4.00",
       highlights: [
-        "Current cGPA: 3.72/4.00",
-        "Relevant coursework: Reinforcement Learning, Data Science, Deep Learning, Web & Search Retrieval, Advanced Programming, Platform-based Programming"
-      ]
+        "Relevant coursework: Reinforcement Learning, Data Science, Deep Learning, Web & Search Retrieval, Advanced Programming, Platform-based Programming.",
+      ],
     },
     {
       school: "SMA Negeri 98 Jakarta",
-      degree: "Senior High School",
-      field: "Mathematics and Natural Science",
-      expected: "2023",
+      degree: "Mathematics and Natural Science",
+      period: "2020 - 2023",
       location: "Jakarta, Indonesia",
-      highlights: [
-        "Completed 2023"
-      ]
-    }
-  ],
-
-  experience: [
-    {
-      company: "AI Research Lab",
-      title: "Machine Learning Intern",
-      period: "Jun 2024 - Present",
-      description: "Contributing to research on efficient language models and prompt optimization techniques.",
-      achievements: [
-        "Implemented novel attention mechanism for reducing model size by 40%",
-        "Published research findings in peer-reviewed venue",
-        "Mentored 2 junior interns on ML best practices"
-      ]
+      highlights: ["Completed senior high school in the Mathematics and Natural Science track."],
     },
-    {
-      company: "Blockchain Startup",
-      title: "Smart Contract Developer",
-      period: "Jan 2024 - May 2024",
-      description: "Developed and audited smart contracts for DeFi protocols.",
-      achievements: [
-        "Built trading bot generating $50K+ in yield",
-        "Conducted security audits for 3+ protocols",
-        "Optimized gas usage reducing costs by 35%"
-      ]
-    },
-    {
-      company: "Tech Consulting Firm",
-      title: "Software Engineering Intern",
-      period: "Jun 2023 - Aug 2023",
-      description: "Developed full-stack applications for enterprise clients.",
-      achievements: [
-        "Built REST APIs handling 1M+ requests/day",
-        "Improved application performance by 45%",
-        "Led code reviews and established coding standards"
-      ]
-    }
   ],
-
   coursework: [
+    "Reinforcement Learning",
+    "Data Science",
+    "Deep Learning",
+    "Web & Search Retrieval",
+    "Advanced Programming",
+    "Platform-based Programming",
+  ],
+  activities: [
     {
-      semester: "Spring 2024",
-      courses: [
-        "Advanced Machine Learning",
-        "Cryptography & Security",
-        "Distributed Systems",
-        "Natural Language Processing"
-      ]
+      organization: "Kripto UI x UI Blockchain Club",
+      role: "Blockchain Team Researcher",
+      period: "Jan 2026 - Present",
+      location: "Depok, Indonesia (Hybrid)",
+      bullets: [
+        "Contributed to blockchain-related research activities and topic exploration.",
+        "Supported research discussions, analysis, and knowledge development on blockchain and Web3 concepts.",
+      ],
     },
     {
-      semester: "Fall 2023",
-      courses: [
-        "Computer Vision",
-        "Blockchain Technology",
-        "Operating Systems",
-        "Algorithm Design"
-      ]
+      organization: "UI Battlegrounds",
+      role: "Web Developer Staff",
+      period: "Sep 2023 - Dec 2023",
+      location: "Pancoran Mas, Indonesia",
+      bullets: [
+        "Migrated data from existing databases into Excel for organizational needs.",
+        "Developed a Django-based website for team registration and announcements.",
+      ],
     },
-    {
-      semester: "Spring 2023",
-      courses: [
-        "Machine Learning",
-        "Database Systems",
-        "Networks & Protocols",
-        "Software Engineering"
-      ]
-    }
-  ]
-};
+  ],
+  additionalSkills: {
+    "Programming Languages": ["C", "Go", "Rust", "MIPS", "AVR", "Matlab / Octave"],
+    "Design & Diagram Tools": ["Figma", "draw.io", "Lucidchart", "Canva", "Excalidraw", "Overleaf"],
+    "Productivity & Development": ["Jira", "IntelliJ IDEA Ultimate", "Prometheus", "Debian"],
+    "English Proficiency": [
+      "TOEFL Prediction Test: 590",
+      "Listening 66",
+      "Structure 54",
+      "Reading 57",
+      "Last taken on 8 Feb 2026",
+    ],
+  },
+} as const;
 
 export type PortfolioData = typeof portfolioData;
+export type Project = PortfolioData["projects"][number];

@@ -1,47 +1,33 @@
-'use client';
-
 import { portfolioData } from '@/lib/portfolio-data';
+import Reveal from './reveal';
+import SectionHeading from './section-heading';
 
-const CourseworkSection = () => {
+export default function CourseworkSection() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card/50">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            Relevant Coursework
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl">
-            Advanced courses focused on AI, cryptography, and system design.
-          </p>
-        </div>
+    <section className="px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading
+          eyebrow="Coursework"
+          title="Courses that support the portfolio direction."
+          description="These courses explain why the project mix leans toward retrieval, data, machine learning, reinforcement learning, and software systems."
+        />
 
-        {/* Coursework Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {portfolioData.coursework.map((semester) => (
-            <div
-              key={semester.semester}
-              className="bg-background border border-border rounded-lg p-8 hover:border-primary transition-all duration-300"
-            >
-              <h3 className="text-lg font-bold text-primary mb-6">
-                {semester.semester}
-              </h3>
-              <div className="space-y-3">
-                {semester.courses.map((course) => (
-                  <div key={course} className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-accent mt-2 flex-shrink-0" />
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {course}
-                    </p>
-                  </div>
-                ))}
-              </div>
+        <Reveal>
+          <div className="rounded-2xl border border-border bg-card p-6">
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {portfolioData.coursework.map((course, index) => (
+                <div
+                  key={course}
+                  className="course-chip rounded-xl border border-border bg-background p-4 text-sm font-semibold text-foreground"
+                  style={{ animationDelay: `${index * 90}ms` }}
+                >
+                  {course}
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
-};
-
-export default CourseworkSection;
+}

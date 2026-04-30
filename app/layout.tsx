@@ -1,15 +1,11 @@
-import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
-import { Analytics } from '@vercel/analytics/next'
-import './globals.css'
-
-const _geist = Geist({ subsets: ["latin"] });
-const _geistMono = Geist_Mono({ subsets: ["latin"] });
+import type { Metadata } from 'next';
+import { Analytics } from '@vercel/analytics/next';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'CS Student | AI & Blockchain Enthusiast',
-  description: 'Portfolio of a computer science student passionate about AI, deep learning, and blockchain technologies. Based in San Francisco.',
-  generator: 'v0.app',
+  title: 'Simforianus Jonathan Flonas Harefa | Portfolio',
+  description:
+    'Portfolio of Simforianus Jonathan Flonas Harefa, a Computer Science student at Universitas Indonesia focused on data, AI, Web3, and software engineering.',
   icons: {
     icon: [
       {
@@ -27,12 +23,12 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-icon.png',
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode
+  children: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -41,5 +37,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }

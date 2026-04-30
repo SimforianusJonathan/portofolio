@@ -1,71 +1,155 @@
-'use client';
-
 import { portfolioData } from '@/lib/portfolio-data';
-import { ArrowRight } from 'lucide-react';
-import Link from 'next/link';
+import { ArrowRight, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
+import Reveal from './reveal';
 
-const HeroSection = () => {
+export default function HeroSection() {
+  const featuredStack = ['Python', 'Next.js', 'Django', 'Kubernetes', 'Solidity', 'PostgreSQL'];
+
   return (
-    <section className="pt-40 pb-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl mx-auto space-y-6">
-        {/* Status Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-card border border-border animate-in fade-in slide-in-from-bottom-4 duration-700">
-          <div className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-          <span className="text-sm text-muted-foreground">Available for opportunities</span>
+    <section className="relative isolate overflow-hidden px-4 pb-20 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pb-28">
+      <div className="hero-grid absolute inset-0 -z-20" />
+      <div className="ambient-sweep absolute inset-0 -z-10" />
+
+      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.08fr_0.92fr]">
+        <div>
+          <Reveal>
+            <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-primary/25 bg-card/70 px-4 py-2 text-sm text-muted-foreground shadow-[0_0_40px_rgba(20,184,166,0.12)] backdrop-blur">
+              <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_18px_var(--accent)]" />
+              <span className="truncate">{portfolioData.availability}</span>
+            </div>
+          </Reveal>
+
+          <Reveal delay={80}>
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-accent">
+              {portfolioData.location}
+            </p>
+            <h1 className="max-w-5xl text-balance text-4xl font-black leading-[1.02] text-foreground sm:text-6xl lg:text-7xl">
+              {portfolioData.name}
+            </h1>
+            <p className="mt-5 max-w-3xl text-balance text-2xl font-semibold leading-tight text-primary sm:text-3xl">
+              {portfolioData.title}
+            </p>
+          </Reveal>
+
+          <Reveal delay={160}>
+            <p className="mt-6 max-w-3xl text-base leading-8 text-muted-foreground sm:text-lg">
+              {portfolioData.summary}
+            </p>
+          </Reveal>
+
+          <Reveal delay={240}>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#projects"
+                className="group inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground shadow-[0_18px_60px_rgba(34,211,238,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
+              >
+                View Selected Projects
+                <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
+              </a>
+              <a
+                href={`mailto:${portfolioData.email}`}
+                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-6 py-3 font-semibold text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary"
+              >
+                <Mail size={18} />
+                Contact Me
+              </a>
+            </div>
+          </Reveal>
+
+          <Reveal delay={320}>
+            <div className="mt-8 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
+              <a
+                href={portfolioData.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 transition-colors hover:text-primary"
+              >
+                <Github size={17} />
+                GitHub
+              </a>
+              <a
+                href={portfolioData.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 transition-colors hover:text-primary"
+              >
+                <Linkedin size={17} />
+                LinkedIn
+              </a>
+              <span className="inline-flex items-center gap-2">
+                <MapPin size={17} />
+                {portfolioData.location}
+              </span>
+            </div>
+          </Reveal>
         </div>
 
-        {/* Main Heading */}
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-tight animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-100">
-          Building the future with{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary">
-            AI & Blockchain
-          </span>
-        </h1>
+        <Reveal direction="scale" delay={180}>
+          <div className="relative">
+            <div className="portfolio-visual rounded-2xl border border-border bg-card/70 p-5 shadow-[0_28px_90px_rgba(0,0,0,0.34)] backdrop-blur-xl">
+              <div className="mb-5 flex items-center justify-between">
+                <div>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                    Portfolio Snapshot
+                  </p>
+                  <h2 className="mt-2 text-2xl font-bold text-foreground">CV converted into impact</h2>
+                </div>
+                <Sparkles className="text-accent" size={24} />
+              </div>
 
-        {/* Subheading */}
-        <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-200">
-          {portfolioData.about}
-        </p>
+              <div className="grid grid-cols-2 gap-3">
+                {portfolioData.quickFacts.map((fact, index) => (
+                  <div
+                    key={fact.label}
+                    className="metric-card rounded-xl border border-border bg-background/70 p-4"
+                    style={{ animationDelay: `${index * 140}ms` }}
+                  >
+                    <p className="text-3xl font-black text-foreground">{fact.value}</p>
+                    <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{fact.label}</p>
+                  </div>
+                ))}
+              </div>
 
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
-          <Link
-            href="#projects"
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 hover:shadow-lg hover:shadow-primary/50 transition-all duration-300"
-          >
-            View My Work
-            <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
-          </Link>
-          <a
-            href={`mailto:${portfolioData.email}`}
-            className="inline-flex items-center justify-center px-8 py-4 bg-card border border-border text-foreground rounded-lg font-semibold hover:border-primary hover:text-primary transition-all duration-300"
-          >
-            Get in Touch
-          </a>
-        </div>
+              <div className="mt-5 rounded-xl border border-border bg-background/70 p-4">
+                <div className="mb-4 flex items-center justify-between">
+                  <p className="text-sm font-semibold text-foreground">Core Stack</p>
+                  <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
+                    Active
+                  </span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {featuredStack.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-md border border-border bg-card px-3 py-1.5 text-xs font-medium text-muted-foreground"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
 
-        {/* Social Links */}
-        <div className="flex gap-6 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-400">
-          <a
-            href={portfolioData.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium hover:underline underline-offset-4"
-          >
-            GitHub
-          </a>
-          <a
-            href={portfolioData.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-muted-foreground hover:text-primary transition-colors text-sm font-medium hover:underline underline-offset-4"
-          >
-            LinkedIn
-          </a>
-        </div>
+              <div className="mt-5 space-y-3">
+                {portfolioData.focus.slice(0, 3).map((focus, index) => (
+                  <div
+                    key={focus.title}
+                    className="signal-row flex items-start gap-3 rounded-xl border border-border bg-background/70 p-4"
+                    style={{ animationDelay: `${index * 170}ms` }}
+                  >
+                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_18px_var(--primary)]" />
+                    <div>
+                      <p className="text-sm font-semibold text-foreground">{focus.title}</p>
+                      <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
+                        {focus.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
-};
-
-export default HeroSection;
+}

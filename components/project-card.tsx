@@ -1,75 +1,80 @@
-'use client';
+import type { Project } from '@/lib/portfolio-data';
+import { ExternalLink } from 'lucide-react';
 
-import { ExternalLink, Github } from 'lucide-react';
-import Link from 'next/link';
-
-interface ProjectCardProps {
-  title: string;
-  description: string;
-  tags: string[];
-  category: 'AI' | 'Blockchain' | 'Web Development';
-  link: string;
-}
-
-const ProjectCard: React.FC<ProjectCardProps> = ({
-  title,
-  description,
-  tags,
-  category,
-  link
-}) => {
-  const getCategoryColor = (cat: string) => {
-    switch (cat) {
-      case 'AI':
-        return 'bg-blue-500/20 text-blue-300 border-blue-500/30';
-      case 'Blockchain':
-        return 'bg-purple-500/20 text-purple-300 border-purple-500/30';
-      default:
-        return 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30';
-    }
-  };
-
-  return (
-    <div className="group h-full flex flex-col bg-card border border-border rounded-lg p-6 hover:border-primary transition-all duration-300 hover:shadow-lg hover:shadow-primary/20">
-      {/* Category Badge */}
-      <div className={`inline-flex w-fit px-3 py-1 rounded-full text-xs font-semibold border mb-4 ${getCategoryColor(category)}`}>
-        {category}
-      </div>
-
-      {/* Title */}
-      <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-        {title}
-      </h3>
-
-      {/* Description */}
-      <p className="text-muted-foreground text-sm mb-6 flex-grow leading-relaxed">
-        {description}
-      </p>
-
-      {/* Tags */}
-      <div className="flex flex-wrap gap-2 mb-6">
-        {tags.map((tag) => (
-          <span
-            key={tag}
-            className="px-3 py-1 bg-background border border-border text-xs text-muted-foreground rounded-full hover:border-primary hover:text-primary transition-colors"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-
-      {/* Link */}
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 text-primary hover:text-accent font-semibold text-sm group/link transition-colors"
-      >
-        View Project
-        <ExternalLink size={16} className="group-hover/link:translate-x-1 transition-transform" />
-      </a>
-    </div>
-  );
+type ProjectCardProps = {
+  project: Project;
 };
 
-export default ProjectCard;
+const categoryStyles: Record<string, string> = {
+  Product: 'border-emerald-400/25 bg-emerald-400/10 text-emerald-200',
+  'Data/IR': 'border-sky-400/25 bg-sky-400/10 text-sky-200',
+  Web3: 'border-violet-400/25 bg-violet-400/10 text-violet-200',
+  'Full-Stack': 'border-cyan-400/25 bg-cyan-400/10 text-cyan-200',
+  Research: 'border-amber-400/25 bg-amber-400/10 text-amber-200',
+  Backend: 'border-rose-400/25 bg-rose-400/10 text-rose-200',
+  'Mobile/Web': 'border-teal-400/25 bg-teal-400/10 text-teal-200',
+};
+
+export default function ProjectCard({ project }: ProjectCardProps) {
+  return (
+    <article className="group flex h-full flex-col rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary hover:shadow-[0_28px_80px_rgba(20,184,166,0.12)]">
+      <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+        <span
+          className={`rounded-full border px-3 py-1 text-xs font-semibold ${
+            categoryStyles[project.category] ?? 'border-border bg-background text-muted-foreground'
+          }`}
+        >
+          {project.category}
+        </span>
+        <span className="text-xs font-semibold text-muted-foreground">{project.period}</span>
+      </div>
+
+      <div className="mb-4">
+        <h3 className="text-2xl font-black leading-tight text-foreground transition-colors group-hover:text-primary">
+          {project.title}
+        </h3>
+        <p className="mt-2 text-sm font-semibold text-accent">{project.subtitle}</p>
+        <p className="mt-1 text-xs uppercase tracking-[0.16em] text-muted-foreground">
+          {project.context}
+        </p>
+      </div>
+
+      <ul className="mb-6 space-y-3">
+        {project.bullets.map((item) => (
+          <li key={item} className="flex gap-3 text-sm leading-6 text-muted-foreground">
+            <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-auto">
+        <div className="mb-5 flex flex-wrap gap-2">
+          {project.stack.map((tag) => (
+            <span
+              key={tag}
+              className="rounded-md border border-border bg-background px-2.5 py-1 text-xs font-medium text-muted-foreground"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          {project.links.map((link) => (
+            <a
+              key={`${project.title}-${link.label}`}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-md border border-border bg-background px-3 py-2 text-xs font-semibold text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              {link.label}
+              <ExternalLink size={14} />
+            </a>
+          ))}
+        </div>
+      </div>
+    </article>
+  );
+}

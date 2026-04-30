@@ -1,69 +1,47 @@
-'use client';
-
 import { portfolioData } from '@/lib/portfolio-data';
+import Reveal from './reveal';
+import SectionHeading from './section-heading';
 
-const EducationSection = () => {
+export default function EducationSection() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-card/50">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            Education
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl">
-            My academic background and relevant coursework.
-          </p>
-        </div>
+    <section id="education" className="section-band px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading
+          eyebrow="Education"
+          title="Academic foundation in computer science."
+          description="The education section keeps the CV's academic details visible while the coursework section expands the technical areas."
+        />
 
-        {/* Education Cards */}
-        <div className="space-y-6">
-          {portfolioData.education.map((edu) => (
-            <div
-              key={edu.school}
-              className="bg-background border border-border rounded-lg p-8 hover:border-primary transition-all duration-300"
-            >
-              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
-                <div>
-                  <h3 className="text-2xl font-bold text-foreground">
-                    {edu.degree}
-                  </h3>
-                  <p className="text-lg text-primary font-semibold mt-1">
-                    {edu.school}
-                  </p>
-                  {edu.location && (
-                    <p className="text-sm text-muted-foreground mt-1">
-                      {edu.location}
-                    </p>
-                  )}
-                </div>
-                <div className="text-right">
-                  <p className="text-muted-foreground font-semibold">
-                    {edu.expected}
-                  </p>
-                  {edu.gpa && (
-                    <p className="text-primary font-bold text-lg">
-                      GPA: {edu.gpa}
-                    </p>
-                  )}
-                </div>
-              </div>
-
-              {/* Highlights */}
-              <div className="space-y-2">
-                {edu.highlights.map((highlight) => (
-                  <div key={highlight} className="flex items-start gap-3">
-                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
-                    <p className="text-muted-foreground">{highlight}</p>
+        <div className="grid gap-5 lg:grid-cols-2">
+          {portfolioData.education.map((edu, index) => (
+            <Reveal key={edu.school} delay={index * 90}>
+              <article className="h-full rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary">
+                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                  <div>
+                    <h3 className="text-2xl font-bold text-foreground">{edu.school}</h3>
+                    <p className="mt-1 text-base font-semibold text-primary">{edu.degree}</p>
+                    <p className="mt-1 text-sm text-muted-foreground">{edu.location}</p>
                   </div>
-                ))}
-              </div>
-            </div>
+                  <div className="sm:text-right">
+                    <p className="text-sm font-semibold text-muted-foreground">{edu.period}</p>
+                    {'gpa' in edu && edu.gpa && (
+                      <p className="mt-1 text-lg font-black text-accent">cGPA {edu.gpa}</p>
+                    )}
+                  </div>
+                </div>
+                <ul className="mt-5 space-y-3">
+                  {edu.highlights.map((highlight) => (
+                    <li key={highlight} className="flex gap-3 text-sm leading-6 text-muted-foreground">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span>{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            </Reveal>
           ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default EducationSection;
+}

@@ -1,8 +1,7 @@
-'use client';
-
+import { portfolioData } from '@/lib/portfolio-data';
 import Link from 'next/link';
 
-const Footer = () => {
+export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const links = [
@@ -10,72 +9,38 @@ const Footer = () => {
     { href: '#projects', label: 'Projects' },
     { href: '#skills', label: 'Skills' },
     { href: '#experience', label: 'Experience' },
-    { href: '#contact', label: 'Contact' }
+    { href: '#contact', label: 'Contact' },
   ];
 
   return (
-    <footer className="bg-card border-t border-border py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* Brand */}
-          <div>
-            <Link href="/" className="text-2xl font-bold text-primary">
-              AC
-            </Link>
-            <p className="text-muted-foreground mt-2 text-sm">
-              CS Student | AI & Blockchain Enthusiast
-            </p>
-          </div>
-
-          {/* Quick Links */}
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
-            <div className="flex flex-col gap-2">
-              {links.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-muted-foreground hover:text-primary transition-colors text-sm"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-          </div>
-
-          {/* Social */}
-          <div>
-            <h3 className="font-semibold text-foreground mb-4">Follow</h3>
-            <div className="flex flex-col gap-2">
-              <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors text-sm"
-              >
-                GitHub
-              </a>
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-primary transition-colors text-sm"
-              >
-                LinkedIn
-              </a>
-            </div>
-          </div>
+    <footer className="border-t border-border bg-background px-4 py-10 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col gap-6 md:flex-row md:items-center md:justify-between">
+        <div>
+          <Link href="/" className="inline-flex items-center gap-3">
+            <span className="grid h-9 w-9 place-items-center rounded-lg border border-primary/30 bg-primary/10 font-bold text-primary">
+              {portfolioData.initials}
+            </span>
+            <span className="font-bold text-foreground">{portfolioData.name}</span>
+          </Link>
+          <p className="mt-2 text-sm text-muted-foreground">{portfolioData.title}</p>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-border pt-8">
-          <p className="text-center text-muted-foreground text-sm">
-            © {currentYear} Alex Chen. All rights reserved. Built with Next.js and Tailwind CSS.
-          </p>
+        <div className="flex flex-wrap gap-3">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-card hover:text-foreground"
+            >
+              {link.label}
+            </a>
+          ))}
         </div>
+
+        <p className="text-sm text-muted-foreground">
+          © {currentYear} {portfolioData.name}.
+        </p>
       </div>
     </footer>
   );
-};
-
-export default Footer;
+}

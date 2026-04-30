@@ -1,64 +1,39 @@
-'use client';
-
 import { portfolioData } from '@/lib/portfolio-data';
+import Reveal from './reveal';
+import SectionHeading from './section-heading';
 
-const SkillsSection = () => {
+export default function SkillsSection() {
   const skillCategories = Object.entries(portfolioData.skills);
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
-        <div className="mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-foreground mb-4">
-            Technical Skills
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl">
-            My toolkit for building modern applications, from machine learning pipelines to blockchain systems.
-          </p>
-        </div>
+    <section id="skills" className="px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <SectionHeading
+          eyebrow="Technical Skills"
+          title="A practical toolkit for research prototypes and deployed applications."
+          description="The stack is intentionally broad because the projects involve data work, backend systems, frontend products, deployments, and smart-contract integrations."
+        />
 
-        {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {skillCategories.map(([category, skills]) => (
-            <div
-              key={category}
-              className="bg-card border border-border rounded-lg p-8 hover:border-primary transition-all duration-300"
-            >
-              <h3 className="text-xl font-bold text-foreground mb-6">
-                {category}
-              </h3>
-              <div className="flex flex-wrap gap-3">
-                {skills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="px-4 py-2 bg-background border border-border rounded-lg text-sm text-muted-foreground hover:border-primary hover:text-primary transition-all duration-300"
-                  >
-                    {skill}
-                  </span>
-                ))}
+        <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {skillCategories.map(([category, skills], index) => (
+            <Reveal key={category} delay={index * 70}>
+              <div className="h-full rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary">
+                <h3 className="mb-5 text-lg font-bold text-foreground">{category}</h3>
+                <div className="flex flex-wrap gap-2">
+                  {skills.map((skill) => (
+                    <span
+                      key={skill}
+                      className="rounded-md border border-border bg-background px-3 py-1.5 text-xs font-medium text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
+            </Reveal>
           ))}
-        </div>
-
-        {/* Current Focus */}
-        <div className="mt-12 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10 border border-primary/30 rounded-lg p-8">
-          <h3 className="text-xl font-bold text-foreground mb-4">
-            Currently Focused On
-          </h3>
-          <ul className="space-y-3">
-            {portfolioData.currentFocus.map((focus) => (
-              <li key={focus} className="flex items-start gap-3">
-                <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                <span className="text-muted-foreground">{focus}</span>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </section>
   );
-};
-
-export default SkillsSection;
+}
