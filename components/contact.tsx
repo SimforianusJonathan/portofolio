@@ -37,8 +37,6 @@ export default function ContactSection() {
         <SectionHeading
           eyebrow="Contact"
           title="Let us connect around engineering, research, or internship opportunities."
-          description="The contact details match the CV header so the web portfolio and resume stay consistent."
-          align="center"
         />
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">

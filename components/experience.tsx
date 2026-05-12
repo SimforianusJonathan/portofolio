@@ -19,10 +19,19 @@ export default function ExperienceSection() {
               <article className="relative rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary md:ml-12">
                 <span className="absolute -left-[3.15rem] top-8 hidden h-4 w-4 rounded-full border-4 border-background bg-primary md:block" />
                 <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground">{exp.role}</h3>
-                    <p className="mt-1 text-base font-semibold text-primary">{exp.organization}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">{exp.location}</p>
+                  <div className="flex gap-4">
+                    <div className="grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-xl border border-border bg-background p-2">
+                      <img
+                        src={exp.logoUrl}
+                        alt={`${exp.organization} logo`}
+                        className="max-h-full max-w-full object-contain"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-foreground">{exp.role}</h3>
+                      <p className="mt-1 text-base font-semibold text-primary">{exp.organization}</p>
+                      <p className="mt-1 text-sm text-muted-foreground">{exp.location}</p>
+                    </div>
                   </div>
                   <p className="rounded-full border border-border bg-background px-3 py-1 text-sm font-semibold text-muted-foreground">
                     {exp.period}

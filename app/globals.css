@@ -212,6 +212,43 @@
     opacity: 1;
   }
 
+  .skill-icon-carousel {
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, black 7%, black 93%, transparent);
+  }
+
+  .skill-icon-track {
+    display: flex;
+    width: max-content;
+    gap: 1rem;
+    animation: skill-marquee 36s linear infinite;
+  }
+
+  .skill-icon-carousel:hover .skill-icon-track {
+    animation-play-state: paused;
+  }
+
+  .skill-icon-card {
+    display: flex;
+    min-width: 12.5rem;
+    align-items: center;
+    gap: 0.875rem;
+    border-radius: 0.75rem;
+    border: 1px solid var(--border);
+    background:
+      linear-gradient(135deg, rgba(45, 212, 191, 0.08), transparent 38%),
+      var(--background);
+    padding: 0.875rem 1rem;
+    transition:
+      border-color 300ms ease,
+      transform 300ms ease;
+  }
+
+  .skill-icon-card:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+  }
+
   .reveal {
     opacity: 0;
     transform: translate3d(0, 22px, 0);
@@ -236,6 +273,15 @@
   .reveal.is-visible {
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+@keyframes skill-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
   }
 }
 

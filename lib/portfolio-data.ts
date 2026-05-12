@@ -7,6 +7,7 @@ export const portfolioData = {
   email: "jonathanharefa9@gmail.com",
   github: "https://github.com/SimforianusJonathan",
   linkedin: "https://www.linkedin.com/in/simforianus-jonathan-flonas-harefa-1a9864266/",
+  avatarUrl: "/identity/pasfoto.png",
   summary:
     "Undergraduate Computer Science student at Universitas Indonesia with hands-on experience across data science, machine learning, information retrieval, reinforcement learning, full-stack development, DevOps, mobile development, and blockchain systems. I have built academic, competition, and team-based projects using Django, Spring Boot, Next.js, Flutter, React, Python, Kubernetes, and Solidity.",
   availability: "Open to internships, research, and software engineering opportunities",
@@ -44,24 +45,36 @@ export const portfolioData = {
     },
   ],
   skills: {
-    "Data, ML & IR": [
+    "Programming Languages": [
       "Python",
+      "Java",
+      "JavaScript",
+      "TypeScript",
+      "C",
+      "Go",
+      "Rust",
+      "MIPS",
+      "AVR",
+      "MATLAB / Octave",
+      "SQL",
+    ],
+    "Data, ML & IR": [
       "NumPy",
       "Pandas",
       "Scikit-learn",
       "Seaborn",
       "Jupyter Notebook",
-      "SQL",
       "BM25",
       "FAISS",
       "PyTerrier",
+      "Reinforcement Learning",
     ],
     "Backend & APIs": [
-      "Java",
       "Spring Boot",
       "Django",
       "Django REST Framework",
       "Node.js",
+      "Overleaf",
       "REST API",
       "JWT Authentication",
       "PostgreSQL",
@@ -70,7 +83,6 @@ export const portfolioData = {
     "Frontend & Mobile": [
       "React",
       "Next.js",
-      "TypeScript",
       "TanStack Start",
       "Vite",
       "Tailwind CSS",
@@ -88,13 +100,22 @@ export const portfolioData = {
       "Supabase",
       "AWS VM",
       "Prometheus",
+      "IntelliJ IDEA Ultimate",
+      "Debian",
+    ],
+    "Design & Productivity": [
+      "Figma",
+      "draw.io",
+      "Lucidchart",
+      "Canva",
+      "Excalidraw",
+      "Jira",
     ],
     "Blockchain & Web3": [
       "Solidity",
       "Smart Contracts",
       "EVM",
       "PolkaVM",
-      "Rust",
       "ethers.js",
       "wagmi",
       "WalletConnect",
@@ -142,6 +163,7 @@ export const portfolioData = {
       period: "Mar 2026",
       context: "Web3 Competition",
       category: "Web3",
+      previewImage: "/identity/agentveil.png",
       stack: ["Python", "Solidity", "Rust", "PolkaVM", "EVM", "Smart Contracts"],
       links: [
         { label: "GitHub", href: "https://github.com/RelAthalla/AgentVeil" },
@@ -159,6 +181,7 @@ export const portfolioData = {
       period: "Jan 2026 - Present",
       context: "Universitas Indonesia",
       category: "Full-Stack",
+      previewImage: "/identity/carlok.png",
       stack: ["Django REST Framework", "Next.js", "PostgreSQL", "Kubernetes", "Helm"],
       links: [
         { label: "Live Demo", href: "https://carlok.ppl.cs.ui.ac.id/" },
@@ -176,6 +199,7 @@ export const portfolioData = {
       period: "Jan 2026 - Present",
       context: "Universitas Indonesia",
       category: "Full-Stack",
+      previewImage: "/identity/siruang.png",
       stack: ["Django REST Framework", "Next.js", "PostgreSQL", "Docker", "Kubernetes", "Helm"],
       links: [
         { label: "Live Demo", href: "https://siruang.ppl.cs.ui.ac.id/" },
@@ -207,6 +231,7 @@ export const portfolioData = {
       period: "Jan 2026 - Feb 2026",
       context: "BPC Competition",
       category: "Product",
+      previewImage: "/identity/rewear.png",
       stack: ["Business Plan", "Product Strategy", "UI/UX Prototype", "Sustainability Innovation"],
       links: [
         { label: "Live Demo", href: "https://rewearplus.vercel.app/" },
@@ -224,6 +249,7 @@ export const portfolioData = {
       period: "Jan 2026",
       context: "Web3 Competition",
       category: "Web3",
+      previewImage: "/identity/flec.png",
       stack: ["React", "Next.js", "ethers.js", "Solidity", "WalletConnect"],
       links: [
         { label: "Live Demo", href: "https://flec-frontend-o5a7.vercel.app/" },
@@ -241,6 +267,7 @@ export const portfolioData = {
       period: "Oct 2025",
       context: "Top 15 Hackathon BI-OJK",
       category: "Web3",
+      previewImage: "/identity/creatifi.png",
       stack: ["React", "Next.js", "ethers.js", "WalletConnect", "Solidity"],
       links: [
         { label: "Live Demo", href: "https://creatifi.vercel.app/" },
@@ -293,6 +320,7 @@ export const portfolioData = {
       role: "Research Assistant - Reinforcement Learning",
       period: "Apr 2026 - Present",
       location: "Depok, Indonesia",
+      logoUrl: "/identity/ui.png",
       bullets: [
         "Conducted research on Markov Decision Process modeling by analyzing selected environments from a lecturer-provided environment list.",
         "Formulated descriptive MDP representations and supported paper analysis on Policy Iteration and Value Iteration under average reward criteria.",
@@ -303,6 +331,7 @@ export const portfolioData = {
       role: "Teaching Assistant - Numerical Analysis",
       period: "Jan 2026 - Present",
       location: "Depok, Indonesia",
+      logoUrl: "/identity/ui.png",
       bullets: [
         "Assisted course instruction and supported students in understanding core numerical analysis topics.",
         "Helped facilitate discussions, assignments, and course-related evaluations.",
@@ -313,6 +342,7 @@ export const portfolioData = {
       role: "Teaching Assistant - Automata Theory, Languages, and Computation",
       period: "Jan 2026 - Present",
       location: "Depok, Indonesia",
+      logoUrl: "/identity/ui.png",
       bullets: [
         "Supported teaching and learning activities for automata theory, formal languages, and computation topics.",
         "Assisted students through discussions, exercises, and course administration tasks.",
@@ -325,6 +355,7 @@ export const portfolioData = {
       degree: "B.Sc. Computer Science",
       period: "2023 - 2027",
       location: "Depok, Indonesia",
+      logoUrl: "/identity/ui.png",
       gpa: "3.72/4.00",
       highlights: [
         "Relevant coursework: Reinforcement Learning, Data Science, Deep Learning, Web & Search Retrieval, Advanced Programming, Platform-based Programming.",
@@ -335,6 +366,7 @@ export const portfolioData = {
       degree: "Mathematics and Natural Science",
       period: "2020 - 2023",
       location: "Jakarta, Indonesia",
+      logoUrl: "/identity/sma98.jpg",
       highlights: ["Completed senior high school in the Mathematics and Natural Science track."],
     },
   ],
@@ -352,6 +384,7 @@ export const portfolioData = {
       role: "Blockchain Team Researcher",
       period: "Jan 2026 - Present",
       location: "Depok, Indonesia (Hybrid)",
+      logoUrl: "/identity/ui_bcc.jpg",
       bullets: [
         "Contributed to blockchain-related research activities and topic exploration.",
         "Supported research discussions, analysis, and knowledge development on blockchain and Web3 concepts.",
@@ -362,6 +395,7 @@ export const portfolioData = {
       role: "Web Developer Staff",
       period: "Sep 2023 - Dec 2023",
       location: "Pancoran Mas, Indonesia",
+      logoUrl: "/identity/uibg.jpg",
       bullets: [
         "Migrated data from existing databases into Excel for organizational needs.",
         "Developed a Django-based website for team registration and announcements.",

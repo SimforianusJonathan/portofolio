@@ -1,26 +1,11 @@
-'use client';
-
 import { portfolioData } from '@/lib/portfolio-data';
-import { useState } from 'react';
 import ProjectCard from './project-card';
 import Reveal from './reveal';
 import SectionHeading from './section-heading';
 
-type Category = 'All' | (typeof portfolioData.projects)[number]['category'];
-
 export default function ProjectsSection() {
-  const categories = [
-    'All',
-    ...Array.from(new Set(portfolioData.projects.map((project) => project.category))),
-  ] as Category[];
-
-  const [selectedCategory, setSelectedCategory] =
-    useState<Category>('All');
-
-  const filteredProjects =
-    selectedCategory === 'All'
-      ? portfolioData.projects
-      : portfolioData.projects.filter((project) => project.category === selectedCategory);
+  const activeWebsiteProjects = portfolioData.projects.filter((project) => 'previewImage' in project);
+  const otherProjects = portfolioData.projects.filter((project) => !('previewImage' in project));
 
   return (
     <section id="projects" className="section-band px-4 py-20 sm:px-6 lg:px-8">
@@ -31,30 +16,54 @@ export default function ProjectsSection() {
           description="Each card keeps the context, stack, links, and concrete contribution bullets from the LaTeX CV so recruiters can scan both breadth and impact."
         />
 
-        <Reveal>
-          <div className="mb-10 flex gap-2 overflow-x-auto pb-2">
-            {categories.map((category) => (
-              <button
-                key={category}
-                onClick={() => setSelectedCategory(category)}
-                className={`whitespace-nowrap rounded-lg border px-4 py-2 text-sm font-semibold transition-all duration-300 ${
-                  selectedCategory === category
-                    ? 'border-primary bg-primary text-primary-foreground shadow-[0_12px_40px_rgba(20,184,166,0.18)]'
-                    : 'border-border bg-card text-muted-foreground hover:border-primary hover:text-foreground'
-                }`}
-              >
-                {category}
-              </button>
-            ))}
-          </div>
-        </Reveal>
-
-        <div className="grid gap-5 lg:grid-cols-2">
-          {filteredProjects.map((project, index) => (
-            <Reveal key={project.title} delay={index * 60}>
-              <ProjectCard project={project} />
+        <div className="space-y-10">
+          <div>
+            <Reveal>
+              <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+                <div>
+                  <h3 className="text-xl font-bold text-foreground">Active Website Previews</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Deployed projects with prepared screenshots and live links.
+                  </p>
+                </div>
+                <span className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                  {activeWebsiteProjects.length} active
+                </span>
+              </div>
             </Reveal>
-          ))}
+
+            <div className="grid auto-rows-fr gap-5 lg:grid-cols-2">
+              {activeWebsiteProjects.map((project, index) => (
+                <Reveal key={project.title} delay={index * 60}>
+                  <ProjectCard project={project} />
+                </Reveal>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <Reveal>
+              <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+                <div>
+                  <h3 className="text-xl font-bold text-foreground">Other Projects</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Research, product, backend, and coursework projects without website screenshots.
+                  </p>
+                </div>
+                <span className="rounded-full border border-border bg-card px-3 py-1 text-xs font-semibold text-muted-foreground">
+                  {otherProjects.length} projects
+                </span>
+              </div>
+            </Reveal>
+
+            <div className="grid auto-rows-fr gap-5 lg:grid-cols-2">
+              {otherProjects.map((project, index) => (
+                <Reveal key={project.title} delay={index * 60}>
+                  <ProjectCard project={project} />
+                </Reveal>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import { portfolioData } from '@/lib/portfolio-data';
-import { Brain, Code2, Database, Network, ShieldCheck } from 'lucide-react';
+import { Brain, Code2, Database, ShieldCheck } from 'lucide-react';
 import Reveal from './reveal';
 import SectionHeading from './section-heading';
 
@@ -40,8 +40,12 @@ export default function AboutSection() {
           <Reveal direction="left">
             <div className="h-full rounded-2xl border border-border bg-card p-6 sm:p-8">
               <div className="mb-6 flex items-center gap-4">
-                <div className="grid h-14 w-14 place-items-center rounded-xl bg-primary/10 text-primary">
-                  <Network size={28} />
+                <div className="h-16 w-16 shrink-0 overflow-hidden rounded-xl border border-primary/25 bg-background">
+                  <img
+                    src={portfolioData.avatarUrl}
+                    alt={portfolioData.name}
+                    className="h-full w-full object-cover object-top"
+                  />
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground">Profile</p>

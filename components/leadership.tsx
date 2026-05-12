@@ -17,10 +17,19 @@ export default function LeadershipSection() {
             <Reveal key={activity.organization} delay={index * 90}>
               <article className="h-full rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:-translate-y-1 hover:border-primary">
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                  <div>
-                    <h3 className="text-2xl font-bold text-foreground">{activity.organization}</h3>
-                    <p className="mt-1 text-base font-semibold text-primary">{activity.role}</p>
-                    <p className="mt-1 text-sm text-muted-foreground">{activity.location}</p>
+                  <div className="flex gap-4">
+                    <div className="grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-xl border border-border bg-background p-2">
+                      <img
+                        src={activity.logoUrl}
+                        alt={`${activity.organization} logo`}
+                        className="max-h-full max-w-full object-contain"
+                      />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-bold text-foreground">{activity.organization}</h3>
+                      <p className="mt-1 text-base font-semibold text-primary">{activity.role}</p>
+                      <p className="mt-1 text-sm text-muted-foreground">{activity.location}</p>
+                    </div>
                   </div>
                   <p className="rounded-full border border-border bg-background px-3 py-1 text-sm font-semibold text-muted-foreground">
                     {activity.period}

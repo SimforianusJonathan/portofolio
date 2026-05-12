@@ -3,8 +3,6 @@ import { ArrowRight, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-rea
 import Reveal from './reveal';
 
 export default function HeroSection() {
-  const featuredStack = ['Python', 'Next.js', 'Django', 'Kubernetes', 'Solidity', 'PostgreSQL'];
-
   return (
     <section className="relative isolate overflow-hidden px-4 pb-20 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pb-28">
       <div className="hero-grid absolute inset-0 -z-20" />
@@ -47,7 +45,7 @@ export default function HeroSection() {
                 <ArrowRight size={18} className="transition-transform group-hover:translate-x-1" />
               </a>
               <a
-                href={`mailto:${portfolioData.email}`}
+                href="#contact"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-card px-6 py-3 font-semibold text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary"
               >
                 <Mail size={18} />
@@ -87,17 +85,25 @@ export default function HeroSection() {
         <Reveal direction="scale" delay={180}>
           <div className="relative">
             <div className="portfolio-visual rounded-2xl border border-border bg-card/70 p-5 shadow-[0_28px_90px_rgba(0,0,0,0.34)] backdrop-blur-xl">
-              <div className="mb-5 flex items-center justify-between">
+              <div className="mb-5 flex items-start justify-between gap-5">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
                     Portfolio Snapshot
                   </p>
-                  <h2 className="mt-2 text-2xl font-bold text-foreground">CV converted into impact</h2>
+                  <h2 className="mt-2 text-2xl font-bold text-foreground">Numbers and profile at a glance</h2>
                 </div>
-                <Sparkles className="text-accent" size={24} />
+                <Sparkles className="shrink-0 text-accent" size={24} />
               </div>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="overflow-hidden rounded-2xl border border-border bg-background/70">
+                <img
+                  src={portfolioData.avatarUrl}
+                  alt={portfolioData.name}
+                  className="aspect-[4/5] w-full object-cover object-top"
+                />
+              </div>
+
+              <div className="mt-5 grid grid-cols-2 gap-3">
                 {portfolioData.quickFacts.map((fact, index) => (
                   <div
                     key={fact.label}
@@ -106,43 +112,6 @@ export default function HeroSection() {
                   >
                     <p className="text-3xl font-black text-foreground">{fact.value}</p>
                     <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{fact.label}</p>
-                  </div>
-                ))}
-              </div>
-
-              <div className="mt-5 rounded-xl border border-border bg-background/70 p-4">
-                <div className="mb-4 flex items-center justify-between">
-                  <p className="text-sm font-semibold text-foreground">Core Stack</p>
-                  <span className="rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent">
-                    Active
-                  </span>
-                </div>
-                <div className="flex flex-wrap gap-2">
-                  {featuredStack.map((item) => (
-                    <span
-                      key={item}
-                      className="rounded-md border border-border bg-card px-3 py-1.5 text-xs font-medium text-muted-foreground"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              </div>
-
-              <div className="mt-5 space-y-3">
-                {portfolioData.focus.slice(0, 3).map((focus, index) => (
-                  <div
-                    key={focus.title}
-                    className="signal-row flex items-start gap-3 rounded-xl border border-border bg-background/70 p-4"
-                    style={{ animationDelay: `${index * 170}ms` }}
-                  >
-                    <span className="mt-1 h-2.5 w-2.5 rounded-full bg-primary shadow-[0_0_18px_var(--primary)]" />
-                    <div>
-                      <p className="text-sm font-semibold text-foreground">{focus.title}</p>
-                      <p className="mt-1 text-xs leading-relaxed text-muted-foreground">
-                        {focus.description}
-                      </p>
-                    </div>
                   </div>
                 ))}
               </div>
