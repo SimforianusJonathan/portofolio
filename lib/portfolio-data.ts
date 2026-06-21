@@ -12,8 +12,8 @@ export const portfolioData = {
     "Undergraduate Computer Science student at Universitas Indonesia with hands-on experience across data science, machine learning, information retrieval, reinforcement learning, full-stack development, DevOps, mobile development, and blockchain systems. I have built academic, competition, and team-based projects using Django, Spring Boot, Next.js, Flutter, React, Python, Kubernetes, and Solidity.",
   availability: "Open to internships, research, and software engineering opportunities",
   quickFacts: [
-    { value: "3.72", label: "cGPA / 4.00" },
-    { value: "11+", label: "Academic & competition projects" },
+    { value: "3.77", label: "cGPA / 4.00" },
+    { value: "13+", label: "Academic & competition projects" },
     { value: "3", label: "Teaching & research roles" },
     { value: "590", label: "TOEFL Prediction score" },
   ],
@@ -140,7 +140,7 @@ export const portfolioData = {
       bullets: [
         "Contributed to an AI-powered multi-currency wallet prototype for cross-border transactions by freelancers and SMEs.",
         "Helped design multi-currency wallet management, payment simulation, currency conversion, AI-based FX recommendation, and fraud-aware transaction flows.",
-        "Advanced as a Stage 1 Top 800 idea out of 2000+ applicants in the ongoing Digdaya competition.",
+        "Advanced as a Stage 1 Top 480 idea out of 2000+ applicants in the ongoing Digdaya competition.",
       ],
     },
     {
@@ -149,12 +149,57 @@ export const portfolioData = {
       period: "Mar 2026",
       context: "Universitas Indonesia",
       category: "Data/IR",
+      previewImage: "/identity/python-search-engine-ui.png",
       stack: ["Python", "BM25", "SPIMI", "FAISS", "PyTerrier", "Tkinter"],
       links: [{ label: "GitHub", href: "https://github.com/SimforianusJonathan/TP2" }],
       bullets: [
         "Built an end-to-end search engine supporting indexing, retrieval, experimentation, and evaluation.",
         "Implemented BM25 ranking, WAND top-k retrieval, BSBI and SPIMI indexing, postings compression, Trie, and FST lexicon structures.",
         "Added LSI with optional FAISS indexing, adaptive retrieval with PyTerrier, and a desktop UI for experimentation workflows.",
+      ],
+    },
+    {
+      title: "IDX Massive Multi-Asset Forecasting",
+      subtitle: "15-Minute Future Log Return Forecasting for Indonesian Stocks",
+      period: "Jun 2026",
+      context: "Universitas Indonesia",
+      category: "Deep Learning",
+      previewImage: "/identity/idx-forecasting-gru.png",
+      previewImages: [
+        "/identity/idx-forecasting-gru.png",
+        "/identity/idx-forecasting-lstm.png",
+        "/identity/idx-forecasting-tcn.png",
+      ],
+      stack: ["Python", "PyTorch", "GRU", "LSTM", "TCN", "Time-Series Forecasting", "Pandas"],
+      links: [
+        {
+          label: "Google Drive",
+          href: "https://drive.google.com/drive/folders/17jcei5yt1cqBpWItjJkKbBICngzHs2gV",
+        },
+      ],
+      bullets: [
+        "Built a multi-asset forecasting pipeline to predict 15-minute future log returns for 100 active IDX stocks using intraday data from 787 stocks.",
+        "Engineered a robust time-series preprocessing flow covering inf/NaN cleaning, volume log transforms, time-based validation, session-aware 60-minute windows, and submission timestamp alignment.",
+        "Compared GRU, LSTM, and TCN architectures with ablation studies; selected the 2-layer GRU as the main model with the best validation RMSE of 0.006184.",
+      ],
+    },
+    {
+      title: "RAG Project",
+      subtitle: "AI Customer Support Assistant for Indonesian UMKM",
+      period: "Jun 2026",
+      context: "Personal Project",
+      category: "AI/RAG",
+      previewImage: "/identity/rag-project-wiz.png",
+      previewImages: [
+        "/identity/rag-project-wiz.png",
+        "/identity/rag-project-wiz-chat.png",
+      ],
+      stack: ["FastAPI", "React", "Vite", "SQLite", "Qdrant", "BM25", "RAG"],
+      links: [{ label: "Live Demo", href: "https://sme-chatbot-mocha.vercel.app/" }],
+      bullets: [
+        "Built a browser-based UMKM support prototype combining a customer storefront, AI chat assistant, and admin dashboard.",
+        "Implemented hybrid retrieval with dense vector search, BM25 sparse search, reciprocal rank fusion, and optional reranking.",
+        "Designed admin workflows for managing product and FAQ knowledge, then retraining the retrieval pipeline from updated business data.",
       ],
     },
     {
@@ -217,6 +262,11 @@ export const portfolioData = {
       period: "Jan 2026 - Present",
       context: "Universitas Indonesia",
       category: "Research",
+      previewImage: "/identity/vacuum-cleaner-rollout.jpeg",
+      previewImages: [
+        "/identity/vacuum-cleaner-rollout.jpeg",
+        "/identity/vacuum-cleaner-mdp-grid.png",
+      ],
       stack: ["Reinforcement Learning", "MDP", "Value Iteration", "Policy Iteration", "Q-Learning"],
       links: [{ label: "GitHub", href: "https://github.com/RelAthalla/mrl26/tree/p1edp-2306217430" }],
       bullets: [
@@ -265,7 +315,7 @@ export const portfolioData = {
       title: "Creatifi",
       subtitle: "Web3 Milestone-Based Crowdfunding Platform",
       period: "Oct 2025",
-      context: "Top 15 Hackathon BI-OJK",
+      context: "Top 15 Ekraf X OJK Hackathon (Infinity Hackathon)",
       category: "Web3",
       previewImage: "/identity/creatifi.png",
       stack: ["React", "Next.js", "ethers.js", "WalletConnect", "Solidity"],
@@ -349,6 +399,36 @@ export const portfolioData = {
       ],
     },
   ],
+  achievements: [
+    {
+      title: "Astra1st 2026 Scholarship Awardee",
+      context: "Scholarship Program",
+      imageUrl: "/identity/achievement-astra1st.png",
+      description:
+        "Selected as an Astra1st scholarship awardee and student development program participant running from June to December 2026.",
+    },
+    {
+      title: "2nd Winner, Futura Innovation Business Case Competition",
+      context: "Fashion & Design Division",
+      imageUrl: "/identity/achievement-futura.jpg",
+      description:
+        "Earned second place in the Fashion & Design division through ReWear+, a sustainable preloved fashion platform with integrated donation flows.",
+    },
+    {
+      title: "Top 15, Ekraf X OJK Hackathon (Infinity Hackathon)",
+      context: "Web3 Hackathon",
+      imageUrl: "/identity/achievement-infinity.jpg",
+      description:
+        "Advanced to the Top 15 with Creatifi, a Web3 milestone-based crowdfunding platform for creator and freelancer projects.",
+    },
+    {
+      title: "Top 480 of 2000+ Applicants, Digdaya Stage 1",
+      context: "Product Innovation Competition",
+      imageUrl: "/identity/achievement-digdaya.webp",
+      description:
+        "Advanced with NusaWallet, an AI-powered multi-currency wallet idea for cross-border transactions by freelancers and SMEs.",
+    },
+  ],
   education: [
     {
       school: "Universitas Indonesia",
@@ -356,7 +436,7 @@ export const portfolioData = {
       period: "2023 - 2027",
       location: "Depok, Indonesia",
       logoUrl: "/identity/ui.png",
-      gpa: "3.72/4.00",
+      gpa: "3.77/4.00",
       highlights: [
         "Relevant coursework: Reinforcement Learning, Data Science, Deep Learning, Web & Search Retrieval, Advanced Programming, Platform-based Programming.",
       ],

@@ -8,6 +8,7 @@ import EducationSection from '@/components/education';
 import ContactSection from '@/components/contact';
 import Footer from '@/components/footer';
 import LeadershipSection from '@/components/leadership';
+import AchievementsSection from '@/components/achievements';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <CurrentFocusSection />
+        <AchievementsSection />
         <EducationSection />
         <ExperienceSection />
         <LeadershipSection />

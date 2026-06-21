@@ -8,8 +8,8 @@ export default function ExperienceSection() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Professional Experience"
-          title="Teaching, research, and academic roles at Fasilkom UI."
-          description="The experience section focuses on roles from the CV that show research direction, academic responsibility, and communication with students."
+          title="Academic roles that show research discipline and communication skills."
+          description="My experience at Fasilkom UI combines research assistance and teaching support, including analytical work, course facilitation, and helping students understand technical material clearly."
         />
 
         <div className="relative space-y-5">

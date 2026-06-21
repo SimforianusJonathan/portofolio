@@ -9,8 +9,8 @@ export default function CurrentFocusSection() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Current Focus"
-          title="The technical areas I am actively sharpening."
-          description="These areas connect the strongest parts of my CV: data-heavy systems, applied AI, search, full-stack delivery, and Web3 product experiments."
+          title="Technical strengths I am building for real product and research work."
+          description="I am focused on applied AI, data-intensive systems, information retrieval, full-stack engineering, and Web3 products, with an emphasis on building solutions that are measurable, reliable, and useful to users."
         />
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">

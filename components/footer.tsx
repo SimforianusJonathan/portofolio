@@ -9,6 +9,7 @@ export default function Footer() {
     { href: '#projects', label: 'Projects' },
     { href: '#skills', label: 'Skills' },
     { href: '#experience', label: 'Experience' },
+    { href: '#achievements', label: 'Achievements' },
     { href: '#contact', label: 'Contact' },
   ];
 

@@ -8,8 +8,8 @@ export default function LeadershipSection() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Leadership & Activities"
-          title="Community work and organization experience."
-          description="These roles round out the technical profile with collaboration, research discussion, and organization-level delivery."
+          title="Organization roles that strengthened teamwork and ownership."
+          description="Beyond coursework and projects, I have contributed to student communities through blockchain research discussions, event support, data migration, and web development responsibilities."
         />
 
         <div className="grid gap-5 lg:grid-cols-2">
