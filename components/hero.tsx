@@ -4,7 +4,7 @@ import Reveal from './reveal';
 
 export default function HeroSection() {
   return (
-    <section className="relative isolate overflow-hidden px-4 pb-20 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pb-28">
+    <section id="about" className="relative isolate overflow-hidden px-4 pb-20 pt-32 sm:px-6 sm:pt-36 lg:px-8 lg:pb-28">
       <div className="hero-grid absolute inset-0 -z-20" />
       <div className="ambient-sweep absolute inset-0 -z-10" />
 
@@ -13,7 +13,7 @@ export default function HeroSection() {
           <Reveal>
             <div className="mb-6 inline-flex max-w-full items-center gap-2 rounded-full border border-primary/25 bg-card/70 px-4 py-2 text-sm text-muted-foreground shadow-[0_0_40px_rgba(20,184,166,0.12)] backdrop-blur">
               <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_18px_var(--accent)]" />
-              <span className="truncate">{portfolioData.availability}</span>
+              <span>{portfolioData.availability}</span>
             </div>
           </Reveal>
 

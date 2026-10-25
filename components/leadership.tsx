@@ -9,7 +9,7 @@ export default function LeadershipSection() {
         <SectionHeading
           eyebrow="Leadership & Activities"
           title="Organization roles that strengthened teamwork and ownership."
-          description="Beyond coursework and projects, I have contributed to student communities through blockchain research discussions, event support, data migration, and web development responsibilities."
+          description="Through Astra1st leadership development and student communities, I contribute to an industry improvement project, blockchain research discussions, and organizational web development."
         />
 
         <div className="grid gap-5 lg:grid-cols-2">

@@ -10,15 +10,17 @@ const projectFilters = [
   { label: 'All', value: 'all' },
   { label: 'Software (Web & App)', value: 'software' },
   { label: 'Web3', value: 'web3' },
-  { label: 'AI / ML', value: 'ai-ml' },
+  { label: 'AI / ML & Data', value: 'ai-ml' },
 ] as const;
 
 type ProjectFilter = (typeof projectFilters)[number]['value'];
 
 const projectFilterMap: Record<Exclude<ProjectFilter, 'all'>, string[]> = {
-  software: ['CARLOK', 'SiRuang', 'Bandung Couture', 'EventSphere', 'ReWear+', 'NusaWallet'],
+  software: ['CARLOK', 'SiRuang', 'Bandung Couture', 'EventSphere', 'ReWear+', 'NusaWallet', 'MRT FLEX'],
   web3: ['Creatifi', 'FLEC', 'AgentVeil'],
   'ai-ml': [
+    'GenoHack Genomic Dashboard',
+    'Material Continuity',
     'IDX Massive Multi-Asset Forecasting',
     'NusaWallet',
     'RAG Project',

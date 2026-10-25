@@ -36,7 +36,7 @@ export default function ContactSection() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Contact"
-          title="Let us connect around engineering, research, or internship opportunities."
+          title="Let us connect around applied AI, engineering, and research."
         />
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">

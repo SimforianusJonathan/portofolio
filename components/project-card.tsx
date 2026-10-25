@@ -17,6 +17,8 @@ type ProjectCardProps = {
 const categoryStyles: Record<string, string> = {
   Product: 'border-emerald-400/25 bg-emerald-400/10 text-emerald-200',
   'AI/RAG': 'border-indigo-400/25 bg-indigo-400/10 text-indigo-200',
+  'Applied AI': 'border-indigo-400/25 bg-indigo-400/10 text-indigo-200',
+  'Data Science': 'border-sky-400/25 bg-sky-400/10 text-sky-200',
   'Data/IR': 'border-sky-400/25 bg-sky-400/10 text-sky-200',
   'Deep Learning': 'border-fuchsia-400/25 bg-fuchsia-400/10 text-fuchsia-200',
   Web3: 'border-violet-400/25 bg-violet-400/10 text-violet-200',
@@ -36,7 +38,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
   if (!hasPreview) {
     return (
-      <article className="group flex flex-col rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary">
+      <article className="group flex h-full flex-col rounded-2xl border border-border bg-card p-5 transition-all duration-300 hover:-translate-y-1 hover:border-primary">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
           <span
             className={`rounded-full border px-3 py-1 text-xs font-semibold ${
@@ -56,7 +58,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.context}
         </p>
 
-        <p className="mt-4 text-sm leading-6 text-muted-foreground">{project.bullets[0]}</p>
+        <ul className="mt-4 space-y-3">
+          {project.bullets.map((item) => (
+            <li key={item} className="flex gap-3 text-sm leading-6 text-muted-foreground">
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
 
         <div className="mt-5 flex flex-wrap gap-2">
           {project.stack.slice(0, 5).map((tag) => (

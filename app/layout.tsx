@@ -5,7 +5,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Simforianus Jonathan Flonas Harefa | Portfolio',
   description:
-    'Portfolio of Simforianus Jonathan Flonas Harefa, a Computer Science student at Universitas Indonesia focused on data, AI, Web3, and software engineering.',
+    'Portfolio of Simforianus Jonathan Flonas Harefa, a Computer Science student at Universitas Indonesia working on LLM agents at GDP Labs and manufacturing machine learning through Astra1st at PT Astra Honda Motor.',
   icons: {
     icon: [
       {

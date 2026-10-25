@@ -10,7 +10,7 @@ export default function CurrentFocusSection() {
         <SectionHeading
           eyebrow="Current Focus"
           title="Technical strengths I am building for real product and research work."
-          description="I am focused on applied AI, data-intensive systems, information retrieval, full-stack engineering, and Web3 products, with an emphasis on building solutions that are measurable, reliable, and useful to users."
+          description="My current work centers on LLM agents and manufacturing machine learning, alongside projects in information retrieval, reinforcement learning, full-stack engineering, and Web3."
         />
 
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">

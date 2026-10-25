@@ -1,7 +1,7 @@
 export const portfolioData = {
   name: "Simforianus Jonathan Flonas Harefa",
   initials: "SJ",
-  title: "Computer Science Student | Data, AI, Web3 & Software Engineering",
+  title: "Computer Science Student | Applied AI, Machine Learning & Software Engineering",
   location: "Depok, Indonesia",
   phone: "+62 877-8830-9023",
   email: "jonathanharefa9@gmail.com",
@@ -9,24 +9,24 @@ export const portfolioData = {
   linkedin: "https://www.linkedin.com/in/simforianus-jonathan-flonas-harefa-1a9864266/",
   avatarUrl: "/identity/pasfoto.png",
   summary:
-    "Undergraduate Computer Science student at Universitas Indonesia with hands-on experience across data science, machine learning, information retrieval, reinforcement learning, full-stack development, DevOps, mobile development, and blockchain systems. I have built academic, competition, and team-based projects using Django, Spring Boot, Next.js, Flutter, React, Python, Kubernetes, and Solidity.",
-  availability: "Open to internships, research, and software engineering opportunities",
+    "Computer Science undergraduate at Universitas Indonesia, building LLM-based AI agents as a Software Developer Engineer Intern at GDP Labs and predictive machine learning for manufacturing through an Astra1st Improvement Project at PT Astra Honda Motor. My work spans applied AI, information retrieval, reinforcement learning, full-stack systems, and Web3, supported by teaching and research experience at Fasilkom UI.",
+  availability: "Software Developer Engineer Intern at GDP Labs | Astra1st Awardee",
   quickFacts: [
-    { value: "3.77", label: "cGPA / 4.00" },
-    { value: "13+", label: "Academic & competition projects" },
-    { value: "3", label: "Teaching & research roles" },
+    { value: "3.75", label: "cGPA / 4.00" },
+    { value: "16", label: "Academic & competition projects" },
+    { value: "5", label: "Teaching & research roles" },
     { value: "590", label: "TOEFL Prediction score" },
   ],
   focus: [
     {
-      title: "Data Science & Analytics",
+      title: "LLM Agents & Applied AI",
       description:
-        "Turning structured and unstructured data into useful analysis, evaluation workflows, and decision support.",
+        "Building LLM-based agents with prompt design, API and database integration, tool calling, debugging, and evaluation.",
     },
     {
       title: "Machine Learning & Reinforcement Learning",
       description:
-        "Exploring supervised learning, deep learning, Markov Decision Processes, and value-based planning methods.",
+        "Developing predictive models for manufacturing and studying reinforcement learning with Gymnasium, planning methods, and policy optimization.",
     },
     {
       title: "Information Retrieval",
@@ -68,20 +68,29 @@ export const portfolioData = {
       "FAISS",
       "PyTerrier",
       "Reinforcement Learning",
+      "PyTorch",
+      "Stable-Baselines3",
+      "Gymnasium",
+      "MLflow",
+      "Hugging Face",
+      "Weights & Biases",
     ],
     "Backend & APIs": [
       "Spring Boot",
       "Django",
       "Django REST Framework",
       "Node.js",
-      "Overleaf",
       "REST API",
       "JWT Authentication",
       "PostgreSQL",
       "SQLite3",
+      "LLM Agents",
+      "Prompt Design",
+      "Function / Tool Calling",
     ],
     "Frontend & Mobile": [
       "React",
+      "React Native",
       "Next.js",
       "TanStack Start",
       "Vite",
@@ -100,6 +109,9 @@ export const portfolioData = {
       "Supabase",
       "AWS VM",
       "Prometheus",
+      "Grafana",
+      "Postman",
+      "ngrok",
       "IntelliJ IDEA Ultimate",
       "Debian",
     ],
@@ -109,6 +121,7 @@ export const portfolioData = {
       "Lucidchart",
       "Canva",
       "Excalidraw",
+      "Overleaf",
       "Jira",
     ],
     "Blockchain & Web3": [
@@ -123,6 +136,48 @@ export const portfolioData = {
     ],
   },
   projects: [
+    {
+      title: "GenoHack Genomic Dashboard",
+      subtitle: "Mutation Hotspot Analysis for Breast Cancer Precision Diagnostics",
+      period: "2026",
+      context: "Grand Winner, GenoHack 2026 National Hackathon - ITB Series",
+      category: "Data Science",
+      stack: ["Genomic Analysis", "Data Analysis", "Dashboard Development"],
+      links: [{ label: "Winner Announcement", href: "https://lnkd.in/p/gqU8mr2P" }],
+      bullets: [
+        "Developed an integrated genomic dashboard and a solution for identifying a minimal set of high-impact mutation hotspots across genes and variants, supporting the team's Grand Winner result at GenoHack 2026.",
+        "Designed the solution to support more efficient and affordable precision diagnostics for breast cancer.",
+      ],
+    },
+    {
+      title: "Material Continuity",
+      subtitle: "AI-Agent-Assisted Manufacturing Recovery System",
+      period: "2026",
+      context: "Top 10 Finalist, BINUS Agentic AI Hackathon - Intelligent Manufacturing Track",
+      category: "Applied AI",
+      stack: ["AI Agents", "Manufacturing Recovery", "Decision Support"],
+      links: [
+        { label: "GitHub", href: "https://github.com/Socrates-Agentic-AI-Manufacturing/material-continuity" },
+        { label: "Finalist Announcement", href: "https://www.instagram.com/p/DdieVQ2iX0o/?img_index=8" },
+      ],
+      bullets: [
+        "Developed an AI-agent-assisted manufacturing recovery system with team antek2 rl, reaching the Top 10 in the Intelligent Manufacturing track of the BINUS Agentic AI Hackathon 2026.",
+        "Helped engineers evaluate material shortages, identify and qualify substitute or recovery options, and make evidence-based material continuity decisions.",
+      ],
+    },
+    {
+      title: "MRT FLEX",
+      subtitle: "Reward-Based Travel Demand Management Concept for MyMRTJKT",
+      period: "2026",
+      context: "Top 5 Finalist, MRT Smart Move Challenge 2026",
+      category: "Product",
+      stack: ["Product Concept", "Reward Design", "Travel Demand Management"],
+      links: [{ label: "Finalist Announcement", href: "https://www.instagram.com/p/DeMBzPXD5Hc/?img_index=4" }],
+      bullets: [
+        "Developed a reward-based feature concept for MyMRTJKT with team MRT Lodon Inovasi, reaching the Top 5 of the MRT Smart Move Challenge 2026.",
+        "Designed incentives for passengers to shift travel times and distribute peak-hour demand more evenly.",
+      ],
+    },
     {
       title: "NusaWallet",
       subtitle: "AI-Powered Multi-Currency Wallet for Cross-Border Transactions",
@@ -139,8 +194,8 @@ export const portfolioData = {
       ],
       bullets: [
         "Contributed to an AI-powered multi-currency wallet prototype for cross-border transactions by freelancers and SMEs.",
-        "Helped design multi-currency wallet management, payment simulation, currency conversion, AI-based FX recommendation, and fraud-aware transaction flows.",
-        "Advanced as a Stage 1 Top 480 idea out of 2000+ applicants in the ongoing Digdaya competition.",
+        "Defined the MVP architecture and end-to-end application flow across presentation, API, business logic, intelligence, data, and external integration layers.",
+        "Advanced to the Digdaya semifinal as a Top 480 idea out of 2000+ applicants.",
       ],
     },
     {
@@ -153,7 +208,7 @@ export const portfolioData = {
       stack: ["Python", "BM25", "SPIMI", "FAISS", "PyTerrier", "Tkinter"],
       links: [{ label: "GitHub", href: "https://github.com/SimforianusJonathan/TP2" }],
       bullets: [
-        "Built an end-to-end search engine supporting indexing, retrieval, experimentation, and evaluation.",
+        "Individually built an end-to-end search engine supporting indexing, retrieval, experimentation, and evaluation for an Information Retrieval course project.",
         "Implemented BM25 ranking, WAND top-k retrieval, BSBI and SPIMI indexing, postings compression, Trie, and FST lexicon structures.",
         "Added LSI with optional FAISS indexing, adaptive retrieval with PyTerrier, and a desktop UI for experimentation workflows.",
       ],
@@ -223,43 +278,41 @@ export const portfolioData = {
     {
       title: "CARLOK",
       subtitle: "Campus Room Discovery and Booking System",
-      period: "Jan 2026 - Present",
+      period: "2026",
       context: "Universitas Indonesia",
       category: "Full-Stack",
       previewImage: "/identity/carlok.png",
-      stack: ["Django REST Framework", "Next.js", "PostgreSQL", "Kubernetes", "Helm"],
+      stack: ["Django REST Framework", "Next.js", "PostgreSQL", "Docker", "Kubernetes", "Helm"],
       links: [
         { label: "Live Demo", href: "https://carlok.ppl.cs.ui.ac.id/" },
-        { label: "GitLab", href: "https://gitlab.com" },
       ],
       bullets: [
-        "Developed admin-side features for managing campus room data, categories, facilities, and related metadata.",
-        "Contributed to backend integration for administrative workflows using Django REST Framework.",
-        "Deployed the application to a faculty-managed Kubernetes cluster using Helm for release and rollout management.",
+        "Contributed to CARLOK and SiRuang admin functionality for room objects, database integration, and file storage for room and facility images.",
+        "Implemented authentication across the room systems via UI CAS with LDAP/SSO, local forms, and Google authentication; source code is maintained in a private GitLab organization.",
+        "Managed multistage deployment and rollout processes on the faculty-managed Kubernetes cluster using Helm.",
       ],
     },
     {
       title: "SiRuang",
       subtitle: "Room Borrowing System for Faculty Facilities",
-      period: "Jan 2026 - Present",
+      period: "2026",
       context: "Universitas Indonesia",
       category: "Full-Stack",
       previewImage: "/identity/siruang.png",
       stack: ["Django REST Framework", "Next.js", "PostgreSQL", "Docker", "Kubernetes", "Helm"],
       links: [
         { label: "Live Demo", href: "https://siruang.ppl.cs.ui.ac.id/" },
-        { label: "GitLab", href: "https://gitlab.com" },
       ],
       bullets: [
         "Built a room borrowing system for Fasilkom UI users, non-Fasilkom UI users, and external UI parties.",
-        "Developed backend and frontend workflows with Django REST Framework, Next.js, and PostgreSQL.",
-        "Used Docker, Kubernetes, and Helm to support development, deployment, and rollout processes.",
+        "Contributed to room administration, image storage, and authentication workflows across SiRuang and CARLOK using Django REST Framework, Next.js, and PostgreSQL.",
+        "Managed multistage deployment and rollouts using Docker, Kubernetes, and Helm; source code is maintained in a private GitLab organization.",
       ],
     },
     {
       title: "Vacuum Cleaning Robot MDP",
       subtitle: "Reinforcement Learning and Markov Decision Process Project",
-      period: "Jan 2026 - Present",
+      period: "2026",
       context: "Universitas Indonesia",
       category: "Research",
       previewImage: "/identity/vacuum-cleaner-rollout.jpeg",
@@ -267,30 +320,30 @@ export const portfolioData = {
         "/identity/vacuum-cleaner-rollout.jpeg",
         "/identity/vacuum-cleaner-mdp-grid.png",
       ],
-      stack: ["Reinforcement Learning", "MDP", "Value Iteration", "Policy Iteration", "Q-Learning"],
+      stack: ["Python", "Gymnasium", "Reinforcement Learning", "MDP", "DQN", "TRPO"],
       links: [{ label: "GitHub", href: "https://github.com/RelAthalla/mrl26/tree/p1edp-2306217430" }],
       bullets: [
-        "Modeled an autonomous vacuum-cleaning robot as an MDP with states covering position, battery, dock, obstacles, and dirt levels.",
-        "Designed scaled-down and scaled-mid variants to balance realism and computational tractability.",
-        "Evaluated Value Iteration, Policy Iteration, Q-Learning, and exhaustive policy search on the proposed environments.",
+        "Designed and implemented a vacuum cleaner environment, including state, action, and reward structures, and integrated it with Gymnasium for training and evaluation.",
+        "Modeled position, battery, dock, obstacles, and dirt levels, with scaled-down and scaled-mid variants to balance realism and computational tractability.",
+        "Analyzed Policy Iteration, Value Iteration, Q-Learning, exhaustive policy search, DQN, Monte Carlo Policy Gradient with and without a baseline, and TRPO.",
       ],
     },
     {
       title: "ReWear+",
       subtitle: "Sustainable Preloved Fashion Platform with Integrated Donation System",
       period: "Jan 2026 - Feb 2026",
-      context: "BPC Competition",
+      context: "Silver Medal, Futura Innovation Hub 2026 - Fashion Division",
       category: "Product",
       previewImage: "/identity/rewear.png",
-      stack: ["Business Plan", "Product Strategy", "UI/UX Prototype", "Sustainability Innovation"],
+      stack: ["Web Development", "Product Flow Design", "UI/UX Prototype", "Sustainability Innovation"],
       links: [
         { label: "Live Demo", href: "https://rewearplus.vercel.app/" },
         { label: "GitHub", href: "https://github.com/SimforianusJonathan/rewear_plus" },
       ],
       bullets: [
-        "Designed a preloved fashion platform with integrated donation-based social impact features.",
-        "Proposed product flows for transaction donation, clothing donation distribution, and resale of donated items.",
-        "Presented the solution in a national business plan competition and earned Silver Medal in the fashion division.",
+        "Joined the team as a web developer to implement a sustainable preloved fashion platform based on a business idea from Fakultas Vokasi.",
+        "Contributed to application design and user flows for transactions and integrated clothing donation features.",
+        "Earned the Silver Medal in the Fashion Division of Futura Innovation Hub 2026 with ReWear+.",
       ],
     },
     {
@@ -324,8 +377,8 @@ export const portfolioData = {
         { label: "GitHub", href: "https://github.com/creatifi-labs" },
       ],
       bullets: [
-        "Developed a decentralized crowdfunding platform with milestone-based funding release for freelancer projects.",
-        "Integrated smart contracts for escrow handling, milestone validation, and secure payout flows.",
+        "Developed frontend-smart contract integration for a decentralized crowdfunding platform with milestone-based funding release for freelancer projects.",
+        "Connected the frontend to smart-contract-based escrow release and payout flows.",
         "Implemented wallet authentication and frontend-smart contract interaction using ABI-based calls.",
       ],
     },
@@ -366,20 +419,64 @@ export const portfolioData = {
   ],
   experience: [
     {
+      organization: "GDP Labs",
+      role: "Software Developer Engineer - Internship",
+      period: "2026 - Present",
+      location: "Depok, Indonesia",
+      logoUrl: "",
+      bullets: [
+        "Design, develop, integrate, test, and maintain LLM-based AI agents, including prompt design and optimization.",
+        "Integrate APIs, databases, and external tools through function/tool calling, and debug and evaluate agent workflows.",
+      ],
+    },
+    {
+      organization: "PT Astra Honda Motor",
+      role: "Machine Learning Engineer - Contract, Astra1st Improvement Project",
+      period: "2026 - Present",
+      location: "Jakarta, Indonesia",
+      logoUrl: "",
+      bullets: [
+        "Develop a predictive machine learning model to detect abnormal patterns in motorcycle manufacturing machinery and provide preventive insights for engineering teams.",
+        "Translate manufacturing data into actionable signals for preventive maintenance and operational decision-making through an Astra1st Improvement Project.",
+      ],
+    },
+    {
       organization: "Faculty of Computer Science, Universitas Indonesia",
-      role: "Research Assistant - Reinforcement Learning",
-      period: "Apr 2026 - Present",
+      role: "Teaching Assistant - Database",
+      period: "2026 - Present",
       location: "Depok, Indonesia",
       logoUrl: "/identity/ui.png",
       bullets: [
-        "Conducted research on Markov Decision Process modeling by analyzing selected environments from a lecturer-provided environment list.",
-        "Formulated descriptive MDP representations and supported paper analysis on Policy Iteration and Value Iteration under average reward criteria.",
+        "Assist course instruction and support students in understanding core database topics.",
+        "Help facilitate discussions, assignments, and course-related evaluations.",
+      ],
+    },
+    {
+      organization: "Faculty of Computer Science, Universitas Indonesia",
+      role: "Teaching Assistant - Introduction to Data Science and AI",
+      period: "2026 - Present",
+      location: "Depok, Indonesia",
+      logoUrl: "/identity/ui.png",
+      bullets: [
+        "Assist course instruction and support students in understanding core data science and artificial intelligence topics.",
+        "Help facilitate discussions, assignments, and course-related evaluations.",
+      ],
+    },
+    {
+      organization: "Faculty of Computer Science, Universitas Indonesia",
+      role: "Research Assistant - Reinforcement Learning",
+      period: "2026",
+      location: "Depok, Indonesia",
+      logoUrl: "/identity/ui.png",
+      bullets: [
+        "Assisted with descriptive review of Markov Decision Process models for lecturer-provided environments.",
+        "Supported literature review by identifying Policy Iteration and Value Iteration works with environments similar to the analyzed settings.",
       ],
     },
     {
       organization: "Faculty of Computer Science, Universitas Indonesia",
       role: "Teaching Assistant - Numerical Analysis",
-      period: "Jan 2026 - Present",
+      period: "2026",
       location: "Depok, Indonesia",
       logoUrl: "/identity/ui.png",
       bullets: [
@@ -390,7 +487,7 @@ export const portfolioData = {
     {
       organization: "Faculty of Computer Science, Universitas Indonesia",
       role: "Teaching Assistant - Automata Theory, Languages, and Computation",
-      period: "Jan 2026 - Present",
+      period: "2026",
       location: "Depok, Indonesia",
       logoUrl: "/identity/ui.png",
       bullets: [
@@ -401,18 +498,50 @@ export const portfolioData = {
   ],
   achievements: [
     {
+      title: "Grand Winner, GenoHack 2026 National Hackathon",
+      context: "ITB Series - Genomics Hackathon",
+      imageUrl: "/identity/achievement-genohack.png",
+      description:
+        "Won first place with an integrated genomic dashboard and mutation hotspot analysis solution designed to support efficient, affordable breast cancer precision diagnostics.",
+      links: [{ label: "Winner Announcement", href: "https://lnkd.in/p/gqU8mr2P" }],
+    },
+    {
+      title: "Accepted, Apple Developer Academy @ BINUS",
+      context: "Incoming Cohort 2027 - Jakarta",
+      imageUrl: "/identity/achievement-apple-developer-academy.png",
+      description:
+        "Selected for the Apple Developer Academy Cohort 2027 in Jakarta. The program is scheduled to begin in March 2027.",
+    },
+    {
+      title: "Top 5 Finalist, MRT Smart Move Challenge 2026",
+      context: "MRT FLEX - Team MRT Lodon Inovasi",
+      description:
+        "Developed MRT FLEX, a reward-based feature concept for MyMRTJKT that encourages passengers to shift travel times and helps distribute peak-hour demand more evenly.",
+      links: [{ label: "Finalist Announcement", href: "https://www.instagram.com/p/DeMBzPXD5Hc/?img_index=4" }],
+    },
+    {
+      title: "Top 10 Finalist, BINUS Agentic AI Hackathon 2026",
+      context: "Intelligent Manufacturing - Team antek2 rl",
+      description:
+        "Developed Material Continuity, an AI-agent-assisted manufacturing recovery system for evaluating material shortages, substitute options, and evidence-based recovery decisions.",
+      links: [
+        { label: "Finalist Announcement", href: "https://www.instagram.com/p/DdieVQ2iX0o/?img_index=8" },
+        { label: "GitHub", href: "https://github.com/Socrates-Agentic-AI-Manufacturing/material-continuity" },
+      ],
+    },
+    {
       title: "Astra1st 2026 Scholarship Awardee",
       context: "Scholarship Program",
       imageUrl: "/identity/achievement-astra1st.png",
       description:
-        "Selected as an Astra1st scholarship awardee and student development program participant running from June to December 2026.",
+        "Selected as one of 33 Astra1st awardees from over 10,000 applicants, with leadership development and an Improvement Project placement at PT Astra Honda Motor.",
     },
     {
-      title: "2nd Winner, Futura Innovation Business Case Competition",
-      context: "Fashion & Design Division",
+      title: "Silver Medal, Futura Innovation Hub 2026",
+      context: "Fashion Division - ReWear+",
       imageUrl: "/identity/achievement-futura.jpg",
       description:
-        "Earned second place in the Fashion & Design division through ReWear+, a sustainable preloved fashion platform with integrated donation flows.",
+        "Awarded the Silver Medal in the Fashion Division for ReWear+, a sustainable preloved fashion platform with an integrated donation system.",
     },
     {
       title: "Top 15, Ekraf X OJK Hackathon (Infinity Hackathon)",
@@ -422,7 +551,7 @@ export const portfolioData = {
         "Advanced to the Top 15 with Creatifi, a Web3 milestone-based crowdfunding platform for creator and freelancer projects.",
     },
     {
-      title: "Top 480 of 2000+ Applicants, Digdaya Stage 1",
+      title: "Semifinalist, Digdaya - Top 480 of 2000+ Applicants",
       context: "Product Innovation Competition",
       imageUrl: "/identity/achievement-digdaya.webp",
       description:
@@ -436,7 +565,7 @@ export const portfolioData = {
       period: "2023 - 2027",
       location: "Depok, Indonesia",
       logoUrl: "/identity/ui.png",
-      gpa: "3.77/4.00",
+      gpa: "3.75/4.00",
       highlights: [
         "Relevant coursework: Reinforcement Learning, Data Science, Deep Learning, Web & Search Retrieval, Advanced Programming, Platform-based Programming.",
       ],
@@ -459,6 +588,17 @@ export const portfolioData = {
     "Platform-based Programming",
   ],
   activities: [
+    {
+      organization: "Astra International",
+      role: "Astra1st Scholarship & Leadership Development Participant",
+      period: "2026 - Present",
+      location: "Depok, Indonesia (Hybrid)",
+      logoUrl: "/identity/achievement-astra1st.png",
+      bullets: [
+        "Participate in Astra1st scholarship and leadership development activities.",
+        "Assigned to PT Astra Honda Motor to contribute to an Improvement Project as a Machine Learning Engineer.",
+      ],
+    },
     {
       organization: "Kripto UI x UI Blockchain Club",
       role: "Blockchain Team Researcher",

@@ -1,6 +1,7 @@
 import { portfolioData } from '@/lib/portfolio-data';
 import Reveal from './reveal';
 import SectionHeading from './section-heading';
+import { Building2 } from 'lucide-react';
 
 export default function ExperienceSection() {
   return (
@@ -8,8 +9,8 @@ export default function ExperienceSection() {
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           eyebrow="Professional Experience"
-          title="Academic roles that show research discipline and communication skills."
-          description="My experience at Fasilkom UI combines research assistance and teaching support, including analytical work, course facilitation, and helping students understand technical material clearly."
+          title="Building AI agents, predictive models, and a foundation for teaching."
+          description="My experience spans LLM-based agent development at GDP Labs, a manufacturing ML improvement project at PT Astra Honda Motor, and teaching and research roles at Fasilkom UI."
         />
 
         <div className="relative space-y-5">
@@ -20,20 +21,24 @@ export default function ExperienceSection() {
                 <span className="absolute -left-[3.15rem] top-8 hidden h-4 w-4 rounded-full border-4 border-background bg-primary md:block" />
                 <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                   <div className="flex gap-4">
-                    <div className="grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-xl border border-border bg-background p-2">
-                      <img
-                        src={exp.logoUrl}
-                        alt={`${exp.organization} logo`}
-                        className="max-h-full max-w-full object-contain"
-                      />
+                    <div className="grid h-16 w-16 shrink-0 place-items-center overflow-hidden rounded-xl border border-border bg-background p-2 text-primary">
+                      {exp.logoUrl ? (
+                        <img
+                          src={exp.logoUrl}
+                          alt={`${exp.organization} logo`}
+                          className="max-h-full max-w-full object-contain"
+                        />
+                      ) : (
+                        <Building2 size={28} aria-hidden="true" />
+                      )}
                     </div>
-                    <div>
+                    <div className="min-w-0">
                       <h3 className="text-2xl font-bold text-foreground">{exp.role}</h3>
                       <p className="mt-1 text-base font-semibold text-primary">{exp.organization}</p>
                       <p className="mt-1 text-sm text-muted-foreground">{exp.location}</p>
                     </div>
                   </div>
-                  <p className="rounded-full border border-border bg-background px-3 py-1 text-sm font-semibold text-muted-foreground">
+                  <p className="shrink-0 self-start whitespace-nowrap rounded-full border border-border bg-background px-3 py-1 text-sm font-semibold text-muted-foreground">
                     {exp.period}
                   </p>
                 </div>

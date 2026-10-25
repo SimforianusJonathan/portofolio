@@ -9,7 +9,7 @@ export default function EducationSection() {
         <SectionHeading
           eyebrow="Education"
           title="Academic foundation in computer science."
-          description="The education section keeps the CV's academic details visible while the coursework section expands the technical areas."
+          description="My studies at Universitas Indonesia combine a computer science foundation with coursework in data science, deep learning, reinforcement learning, and information retrieval."
         />
 
         <div className="grid gap-5 lg:grid-cols-2">
