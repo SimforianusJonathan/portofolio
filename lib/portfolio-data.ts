@@ -143,7 +143,7 @@ export const portfolioData = {
       context: "Grand Winner, GenoHack 2026 National Hackathon - ITB Series",
       category: "Data Science",
       stack: ["Genomic Analysis", "Data Analysis", "Dashboard Development"],
-      links: [{ label: "Winner Announcement", href: "https://lnkd.in/p/gqU8mr2P" }],
+      links: [],
       bullets: [
         "Developed an integrated genomic dashboard and a solution for identifying a minimal set of high-impact mutation hotspots across genes and variants, supporting the team's Grand Winner result at GenoHack 2026.",
         "Designed the solution to support more efficient and affordable precision diagnostics for breast cancer.",
@@ -156,10 +156,7 @@ export const portfolioData = {
       context: "Top 10 Finalist, BINUS Agentic AI Hackathon - Intelligent Manufacturing Track",
       category: "Applied AI",
       stack: ["AI Agents", "Manufacturing Recovery", "Decision Support"],
-      links: [
-        { label: "GitHub", href: "https://github.com/Socrates-Agentic-AI-Manufacturing/material-continuity" },
-        { label: "Finalist Announcement", href: "https://www.instagram.com/p/DdieVQ2iX0o/?img_index=8" },
-      ],
+      links: [],
       bullets: [
         "Developed an AI-agent-assisted manufacturing recovery system with team antek2 rl, reaching the Top 10 in the Intelligent Manufacturing track of the BINUS Agentic AI Hackathon 2026.",
         "Helped engineers evaluate material shortages, identify and qualify substitute or recovery options, and make evidence-based material continuity decisions.",
@@ -172,7 +169,7 @@ export const portfolioData = {
       context: "Top 5 Finalist, MRT Smart Move Challenge 2026",
       category: "Product",
       stack: ["Product Concept", "Reward Design", "Travel Demand Management"],
-      links: [{ label: "Finalist Announcement", href: "https://www.instagram.com/p/DeMBzPXD5Hc/?img_index=4" }],
+      links: [],
       bullets: [
         "Developed a reward-based feature concept for MyMRTJKT with team MRT Lodon Inovasi, reaching the Top 5 of the MRT Smart Move Challenge 2026.",
         "Designed incentives for passengers to shift travel times and distribute peak-hour demand more evenly.",
@@ -503,7 +500,6 @@ export const portfolioData = {
       imageUrl: "/identity/achievement-genohack.png",
       description:
         "Won first place with an integrated genomic dashboard and mutation hotspot analysis solution designed to support efficient, affordable breast cancer precision diagnostics.",
-      links: [{ label: "Winner Announcement", href: "https://lnkd.in/p/gqU8mr2P" }],
     },
     {
       title: "Accepted, Apple Developer Academy @ BINUS",
@@ -515,19 +511,16 @@ export const portfolioData = {
     {
       title: "Top 5 Finalist, MRT Smart Move Challenge 2026",
       context: "MRT FLEX - Team MRT Lodon Inovasi",
+      imageUrl: "/identity/achievement-smart-move.png",
       description:
         "Developed MRT FLEX, a reward-based feature concept for MyMRTJKT that encourages passengers to shift travel times and helps distribute peak-hour demand more evenly.",
-      links: [{ label: "Finalist Announcement", href: "https://www.instagram.com/p/DeMBzPXD5Hc/?img_index=4" }],
     },
     {
       title: "Top 10 Finalist, BINUS Agentic AI Hackathon 2026",
       context: "Intelligent Manufacturing - Team antek2 rl",
+      imageUrl: "/identity/achievement-agentic-ai-hackathon.png",
       description:
         "Developed Material Continuity, an AI-agent-assisted manufacturing recovery system for evaluating material shortages, substitute options, and evidence-based recovery decisions.",
-      links: [
-        { label: "Finalist Announcement", href: "https://www.instagram.com/p/DdieVQ2iX0o/?img_index=8" },
-        { label: "GitHub", href: "https://github.com/Socrates-Agentic-AI-Manufacturing/material-continuity" },
-      ],
     },
     {
       title: "Astra1st 2026 Scholarship Awardee",
